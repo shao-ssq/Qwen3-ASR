@@ -1,0 +1,192 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776305477371,
+  "projectRoot": "C:\\Users\\shaoqisun\\Desktop\\Qwen3-ASR",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "pyproject.toml"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "flask",
+        "version": null,
+        "category": "backend"
+      }
+    ],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "pytest",
+    "lintCommand": "ruff check",
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "examples"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1776305477351,
+      "keyFiles": [
+        "Qwen3_ASR.pdf"
+      ]
+    },
+    "docker": {
+      "path": "docker",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776305477352,
+      "keyFiles": [
+        "Dockerfile-qwen3-asr-cu128"
+      ]
+    },
+    "examples": {
+      "path": "examples",
+      "purpose": "Example code",
+      "fileCount": 4,
+      "lastAccessed": 1776305477352,
+      "keyFiles": [
+        "example_qwen3_asr_transformers.py",
+        "example_qwen3_asr_vllm.py",
+        "example_qwen3_asr_vllm_streaming.py",
+        "example_qwen3_forced_aligner.py"
+      ]
+    },
+    "finetuning": {
+      "path": "finetuning",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1776305477353,
+      "keyFiles": [
+        "qwen3_asr_sft.py",
+        "README.md"
+      ]
+    },
+    "graphify-out": {
+      "path": "graphify-out",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1776305477353,
+      "keyFiles": [
+        "cost.json",
+        "graph.html",
+        "graph.json",
+        "GRAPH_REPORT.md",
+        "manifest.json"
+      ]
+    },
+    "qwen_asr": {
+      "path": "qwen_asr",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1776305477353,
+      "keyFiles": [
+        "__init__.py",
+        "__main__.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "qwen_asr\\inference\\qwen3_asr.py",
+      "accessCount": 7,
+      "lastAccessed": 1776328498434,
+      "type": "directory"
+    },
+    {
+      "path": "qwen_asr\\inference\\utils.py",
+      "accessCount": 5,
+      "lastAccessed": 1776327403248,
+      "type": "directory"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 3,
+      "lastAccessed": 1776327396044,
+      "type": "file"
+    },
+    {
+      "path": "finetuning\\README.md",
+      "accessCount": 2,
+      "lastAccessed": 1776165644922,
+      "type": "file"
+    },
+    {
+      "path": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
+      "accessCount": 2,
+      "lastAccessed": 1776327303906,
+      "type": "directory"
+    },
+    {
+      "path": ".graphify_detect.json",
+      "accessCount": 1,
+      "lastAccessed": 1776165548180,
+      "type": "file"
+    },
+    {
+      "path": ".graphify_ast.json",
+      "accessCount": 1,
+      "lastAccessed": 1776165631893,
+      "type": "file"
+    },
+    {
+      "path": "graphify-out\\.graphify_chunk_01.json",
+      "accessCount": 1,
+      "lastAccessed": 1776165714982,
+      "type": "file"
+    },
+    {
+      "path": "graphify-out\\GRAPH_REPORT.md",
+      "accessCount": 1,
+      "lastAccessed": 1776165908200,
+      "type": "file"
+    },
+    {
+      "path": "g.py",
+      "accessCount": 1,
+      "lastAccessed": 1776327166610,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1776327242627,
+      "type": "directory"
+    },
+    {
+      "path": "qwen_asr",
+      "accessCount": 1,
+      "lastAccessed": 1776327254202,
+      "type": "directory"
+    }
+  ],
+  "userDirectives": []
+}

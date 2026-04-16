@@ -732,7 +732,7 @@ class Qwen3ASRModel:
             if state.chunk_id < state.unfixed_chunk_num:
                 prefix = ""
             else:
-                cur_ids = self.processor.tokenizer.encode(state._raw_decoded)
+                cur_ids = self.processor.tokenizer.encode(state.text)
                 k = int(state.unfixed_token_num)
                 while True:
                     end_idx = max(0, len(cur_ids) - k)
