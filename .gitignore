@@ -20,5 +20,6 @@ wheels/
 *.egg
 .idea/
 .vscode/
+.omc/
 venv/
 env/

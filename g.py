@@ -198,6 +198,15 @@ def _process_vad_and_asr(
         session.in_speech = False
         session.silence_ms = 0
 
+        # 断句后重置 ASR state，防止 audio_accum 无限增长导致推理越来越慢
+        if is_end:
+            session.state = global_asr.init_streaming_state(
+                unfixed_chunk_num=UNFIXED_CHUNK_NUM,
+                unfixed_token_num=UNFIXED_TOKEN_NUM,
+                chunk_size_sec=CHUNK_SIZE_SEC,
+            )
+            session.last_finalized_text = ""
+
     # 保存上一次状态供下一次迭代使用（用原始 is_speech，而非状态机的 in_speech）
     session.was_in_speech = is_speech
 

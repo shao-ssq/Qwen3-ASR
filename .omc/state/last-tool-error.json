@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"python -c \\\"\\nimport re\\nfrom pathlib import Path\\nreport = Path('graphify-out/GRAPH_REPORT.md').read_text(encoding='utf-8')\\n# Extract God Nodes, Surprising Connections, Suggested Questio...",
-  "error": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<string>\", line 4, in <module>\r\n  File \"D:\\Miniconda3\\envs\\test\\Lib\\pathlib.py\", line 1028, in read_text\r\n    return f.read()\r\n           ^^^^^^^^\r\n  File \"<frozen codecs>\", line 322, in decode\r\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0xa1 in position 167: invalid start byte",
-  "timestamp": "2026-04-14T11:24:45.275Z",
-  "retry_count": 2
-}
