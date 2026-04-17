@@ -113,11 +113,11 @@ def _gc_sessions():
     ]
     for sid in audio_timeout:
         try:
-            print(f"[自动结束] 会话 {sid}: {now - SESSIONS[sid].last_seen:.1f}秒 未收到语音")
+            logger.info("[自动结束] 会话 %s: %.1f秒 未收到语音", sid, now - SESSIONS[sid].last_seen)
             with _asr_lock:
                 global_asr.finish_streaming_transcribe(SESSIONS[sid].state)
         except Exception as e:
-            print(f"[自动结束错误] 会话 {sid}: {e}")
+            logger.error("[自动结束错误] 会话 %s: %s", sid, e)
         SESSIONS.pop(sid, None)
 
     # 强制清理超过 SESSION_TTL_SEC 的会话
@@ -307,10 +307,11 @@ def api_chunk():
 
     vad = response_data["vad_status"]
     elapsed_ms = (time.time() - t0) * 1000
+    perf_tag = " [严重超时]" if elapsed_ms > 400 else " [延迟]" if elapsed_ms > 200 else " [缓慢]" if elapsed_ms > 100 else ""
     logger.info(
-        "[vad] time=%s session_id=%s cost=%.1fms | is_start=%s is_end=%s is_speech=%s silence_ms=%.1f seg=%s"
+        "[vad] time=%s session_id=%s cost=%.1fms%s | is_start=%s is_end=%s is_speech=%s silence_ms=%.1f seg=%s"
         " | lang=%s text=%r",
-        time.strftime("%Y-%m-%d %H:%M:%S"), session_id, elapsed_ms,
+        time.strftime("%Y-%m-%d %H:%M:%S"), session_id, elapsed_ms, perf_tag,
         vad["is_start"], vad["is_end"], vad["is_speech"], vad["silence_ms"],
         vad["segment_index"], response_data["language"],
         response_data["text"],
@@ -350,7 +351,7 @@ def parse_args():
     p.add_argument("--asr-model-path", default="/root/Qwen3-ASR-1.7B", help="模型名称或本地路径")
     p.add_argument("--host", default="0.0.0.0", help="绑定主机")
     p.add_argument("--port", type=int, default=8000, help="绑定端口")
-    p.add_argument("--gpu-memory-utilization", type=float, default=0.25, help="vLLM GPU 显存利用率")
+    p.add_argument("--gpu-memory-utilization", type=float, default=0.5, help="vLLM GPU 显存利用率")
 
     p.add_argument("--unfixed-chunk-num", type=int, default=2, help="前缀之前的初始切片数量")
     p.add_argument("--unfixed-token-num", type=int, default=5, help="回滚的 token 数量")
@@ -382,9 +383,9 @@ def main():
         gpu_memory_utilization=args.gpu_memory_utilization,
         max_new_tokens=32,
     )
-    print(f"模型已加载：{args.asr_model_path}")
-    print(f"VAD 设置：RMS 阈值={RMS_THRESHOLD:.4f}, 静音断句={SILENCE_MS_TO_FINALIZE}ms")
-    print(f"服务器启动于 http://{args.host}:{args.port}/")
+    logger.info("模型已加载：%s", args.asr_model_path)
+    logger.info("VAD 设置：RMS 阈值=%.4f, 静音断句=%dms", RMS_THRESHOLD, SILENCE_MS_TO_FINALIZE)
+    logger.info("服务器启动于 http://%s:%d/", args.host, args.port)
     _start_gc_monitor()
     app.run(host=args.host, port=args.port, debug=False, use_reloader=False, threaded=True)
 
