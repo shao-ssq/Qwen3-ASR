@@ -1,622 +1,151 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "asr_model_family",
-        "label": "Qwen3-ASR Model Family",
-        "nodes": [
-          "readme_qwen3_asr_1_7b",
-          "readme_qwen3_asr_0_6b",
-          "readme_qwen3_forced_aligner"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 0.95,
-        "source_file": "README.md"
-      },
-      {
-        "id": "inference_backends",
-        "label": "Inference Backend Options",
-        "nodes": [
-          "readme_transformers_backend",
-          "readme_vllm_backend",
-          "readme_streaming_inference",
-          "readme_offline_inference"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 0.9,
-        "source_file": "README.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
-      "label": "example_qwen3_asr_transformers.py",
+      "label": "g.py",
       "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
+      "source_file": "g.py",
       "source_location": "L1",
-      "id": "examples_example_qwen3_asr_transformers_py",
-      "community": 16,
-      "norm_label": "example_qwen3_asr_transformers.py"
-    },
-    {
-      "label": "_download_audio_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L45",
-      "id": "example_qwen3_asr_transformers_download_audio_bytes",
-      "community": 16,
-      "norm_label": "_download_audio_bytes()"
-    },
-    {
-      "label": "_read_wav_from_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L51",
-      "id": "example_qwen3_asr_transformers_read_wav_from_bytes",
-      "community": 16,
-      "norm_label": "_read_wav_from_bytes()"
-    },
-    {
-      "label": "_to_data_url_base64()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L57",
-      "id": "example_qwen3_asr_transformers_to_data_url_base64",
-      "community": 16,
-      "norm_label": "_to_data_url_base64()"
-    },
-    {
-      "label": "_print_result()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L62",
-      "id": "example_qwen3_asr_transformers_print_result",
-      "community": 16,
-      "norm_label": "_print_result()"
-    },
-    {
-      "label": "test_single_url()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L74",
-      "id": "example_qwen3_asr_transformers_test_single_url",
-      "community": 16,
-      "norm_label": "test_single_url()"
-    },
-    {
-      "label": "test_batch_mixed()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L84",
-      "id": "example_qwen3_asr_transformers_test_batch_mixed",
-      "community": 16,
-      "norm_label": "test_batch_mixed()"
-    },
-    {
-      "label": "test_single_with_timestamps()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L101",
-      "id": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "community": 16,
-      "norm_label": "test_single_with_timestamps()"
-    },
-    {
-      "label": "test_batch_with_timestamps()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L112",
-      "id": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "community": 16,
-      "norm_label": "test_batch_with_timestamps()"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L127",
-      "id": "example_qwen3_asr_transformers_main",
-      "community": 16,
-      "norm_label": "main()"
-    },
-    {
-      "label": "example_qwen3_asr_vllm.py",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L1",
-      "id": "examples_example_qwen3_asr_vllm_py",
-      "community": 17,
-      "norm_label": "example_qwen3_asr_vllm.py"
-    },
-    {
-      "label": "_download_audio_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L49",
-      "id": "example_qwen3_asr_vllm_download_audio_bytes",
-      "community": 17,
-      "norm_label": "_download_audio_bytes()"
-    },
-    {
-      "label": "_read_wav_from_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L55",
-      "id": "example_qwen3_asr_vllm_read_wav_from_bytes",
-      "community": 17,
-      "norm_label": "_read_wav_from_bytes()"
-    },
-    {
-      "label": "_to_data_url_base64()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L61",
-      "id": "example_qwen3_asr_vllm_to_data_url_base64",
-      "community": 17,
-      "norm_label": "_to_data_url_base64()"
-    },
-    {
-      "label": "_print_result()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L66",
-      "id": "example_qwen3_asr_vllm_print_result",
-      "community": 17,
-      "norm_label": "_print_result()"
-    },
-    {
-      "label": "test_single_url()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L78",
-      "id": "example_qwen3_asr_vllm_test_single_url",
-      "community": 17,
-      "norm_label": "test_single_url()"
-    },
-    {
-      "label": "test_batch_mixed()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L88",
-      "id": "example_qwen3_asr_vllm_test_batch_mixed",
-      "community": 17,
-      "norm_label": "test_batch_mixed()"
-    },
-    {
-      "label": "test_single_with_timestamps()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L105",
-      "id": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "community": 17,
-      "norm_label": "test_single_with_timestamps()"
-    },
-    {
-      "label": "test_batch_with_timestamps()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L116",
-      "id": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "community": 17,
-      "norm_label": "test_batch_with_timestamps()"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L131",
-      "id": "example_qwen3_asr_vllm_main",
-      "community": 17,
-      "norm_label": "main()"
-    },
-    {
-      "label": "example_qwen3_asr_vllm_streaming.py",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L1",
-      "id": "examples_example_qwen3_asr_vllm_streaming_py",
-      "community": 19,
-      "norm_label": "example_qwen3_asr_vllm_streaming.py"
-    },
-    {
-      "label": "_download_audio_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L38",
-      "id": "example_qwen3_asr_vllm_streaming_download_audio_bytes",
-      "community": 19,
-      "norm_label": "_download_audio_bytes()"
-    },
-    {
-      "label": "_read_wav_from_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L44",
-      "id": "example_qwen3_asr_vllm_streaming_read_wav_from_bytes",
-      "community": 19,
-      "norm_label": "_read_wav_from_bytes()"
-    },
-    {
-      "label": "_resample_to_16k()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L50",
-      "id": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "community": 19,
-      "norm_label": "_resample_to_16k()"
-    },
-    {
-      "label": "run_streaming_case()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L64",
-      "id": "example_qwen3_asr_vllm_streaming_run_streaming_case",
-      "community": 19,
-      "norm_label": "run_streaming_case()"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L88",
-      "id": "example_qwen3_asr_vllm_streaming_main",
-      "community": 19,
-      "norm_label": "main()"
-    },
-    {
-      "label": "Simple resample to 16k if needed (uses linear interpolation; good enough for a t",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L51",
-      "id": "example_qwen3_asr_vllm_streaming_rationale_51",
-      "community": 19,
-      "norm_label": "simple resample to 16k if needed (uses linear interpolation; good enough for a t"
-    },
-    {
-      "label": "example_qwen3_forced_aligner.py",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L1",
-      "id": "examples_example_qwen3_forced_aligner_py",
-      "community": 6,
-      "norm_label": "example_qwen3_forced_aligner.py"
-    },
-    {
-      "label": "_download_audio_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L51",
-      "id": "example_qwen3_forced_aligner_download_audio_bytes",
-      "community": 6,
-      "norm_label": "_download_audio_bytes()"
-    },
-    {
-      "label": "_read_wav_from_bytes()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L67",
-      "id": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "community": 6,
-      "norm_label": "_read_wav_from_bytes()"
-    },
-    {
-      "label": "_to_data_url_base64()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L82",
-      "id": "example_qwen3_forced_aligner_to_data_url_base64",
-      "community": 6,
-      "norm_label": "_to_data_url_base64()"
-    },
-    {
-      "label": "_print_result()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L97",
-      "id": "example_qwen3_forced_aligner_print_result",
-      "community": 6,
-      "norm_label": "_print_result()"
-    },
-    {
-      "label": "test_single_url()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L116",
-      "id": "example_qwen3_forced_aligner_test_single_url",
-      "community": 6,
-      "norm_label": "test_single_url()"
-    },
-    {
-      "label": "test_batch_url()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L130",
-      "id": "example_qwen3_forced_aligner_test_batch_url",
-      "community": 6,
-      "norm_label": "test_batch_url()"
-    },
-    {
-      "label": "test_base64_data_url()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L144",
-      "id": "example_qwen3_forced_aligner_test_base64_data_url",
-      "community": 6,
-      "norm_label": "test_base64_data_url()"
-    },
-    {
-      "label": "test_numpy_tuple_from_request()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L161",
-      "id": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "community": 6,
-      "norm_label": "test_numpy_tuple_from_request()"
-    },
-    {
-      "label": "test_batch_mixed_inputs()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L178",
-      "id": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "community": 6,
-      "norm_label": "test_batch_mixed_inputs()"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L198",
-      "id": "example_qwen3_forced_aligner_main",
-      "community": 6,
-      "norm_label": "main()"
-    },
-    {
-      "label": "Download audio bytes from a URL.      Args:         url (str): Audio URL.",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L52",
-      "id": "example_qwen3_forced_aligner_rationale_52",
-      "community": 6,
-      "norm_label": "download audio bytes from a url.      args:         url (str): audio url."
-    },
-    {
-      "label": "Decode audio bytes into waveform and sampling rate.      Args:         audio_",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L68",
-      "id": "example_qwen3_forced_aligner_rationale_68",
-      "community": 6,
-      "norm_label": "decode audio bytes into waveform and sampling rate.      args:         audio_"
-    },
-    {
-      "label": "Convert audio bytes into a base64 data URL string.      Args:         audio_b",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L83",
-      "id": "example_qwen3_forced_aligner_rationale_83",
-      "community": 6,
-      "norm_label": "convert audio bytes into a base64 data url string.      args:         audio_b"
-    },
-    {
-      "label": "Print a compact summary for debugging.      Args:         title (str): Case n",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L98",
-      "id": "example_qwen3_forced_aligner_rationale_98",
-      "community": 6,
-      "norm_label": "print a compact summary for debugging.      args:         title (str): case n"
-    },
-    {
-      "label": "Single-sample alignment using HTTPS URL audio input.",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L117",
-      "id": "example_qwen3_forced_aligner_rationale_117",
-      "community": 6,
-      "norm_label": "single-sample alignment using https url audio input."
-    },
-    {
-      "label": "Batch alignment using HTTPS URL audio input.",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L131",
-      "id": "example_qwen3_forced_aligner_rationale_131",
-      "community": 6,
-      "norm_label": "batch alignment using https url audio input."
-    },
-    {
-      "label": "Single-sample alignment using base64 data URL audio input.",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L145",
-      "id": "example_qwen3_forced_aligner_rationale_145",
-      "community": 6,
-      "norm_label": "single-sample alignment using base64 data url audio input."
-    },
-    {
-      "label": "Single-sample alignment using (np.ndarray, sr) input where waveform is obtained",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L162",
-      "id": "example_qwen3_forced_aligner_rationale_162",
-      "community": 6,
-      "norm_label": "single-sample alignment using (np.ndarray, sr) input where waveform is obtained"
-    },
-    {
-      "label": "Batch alignment mixing URL, base64, and (np.ndarray, sr) inputs.",
-      "file_type": "rationale",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L179",
-      "id": "example_qwen3_forced_aligner_rationale_179",
-      "community": 6,
-      "norm_label": "batch alignment mixing url, base64, and (np.ndarray, sr) inputs."
-    },
-    {
-      "label": "qwen3_asr_sft.py",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L1",
-      "id": "finetuning_qwen3_asr_sft_py",
+      "id": "g_py",
       "community": 8,
-      "norm_label": "qwen3_asr_sft.py"
+      "norm_label": "g.py"
     },
     {
-      "label": "patch_outer_forward()",
+      "label": "Session",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
+      "source_file": "g.py",
       "source_location": "L31",
-      "id": "qwen3_asr_sft_patch_outer_forward",
+      "id": "g_session",
       "community": 8,
-      "norm_label": "patch_outer_forward()"
+      "norm_label": "session"
     },
     {
-      "label": "find_latest_checkpoint()",
+      "label": "_gc_sessions()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L67",
-      "id": "qwen3_asr_sft_find_latest_checkpoint",
+      "source_file": "g.py",
+      "source_location": "L79",
+      "id": "g_gc_sessions",
       "community": 8,
-      "norm_label": "find_latest_checkpoint()"
+      "norm_label": "_gc_sessions()"
     },
     {
-      "label": "load_audio()",
+      "label": "_get_session()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L84",
-      "id": "qwen3_asr_sft_load_audio",
-      "community": 8,
-      "norm_label": "load_audio()"
-    },
-    {
-      "label": "build_prefix_messages()",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L89",
-      "id": "qwen3_asr_sft_build_prefix_messages",
-      "community": 8,
-      "norm_label": "build_prefix_messages()"
-    },
-    {
-      "label": "make_preprocess_fn_prefix_only()",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L96",
-      "id": "qwen3_asr_sft_make_preprocess_fn_prefix_only",
-      "community": 8,
-      "norm_label": "make_preprocess_fn_prefix_only()"
-    },
-    {
-      "label": "DataCollatorForQwen3ASRFinetuning",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
+      "source_file": "g.py",
       "source_location": "L115",
-      "id": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
+      "id": "g_get_session",
       "community": 8,
-      "norm_label": "datacollatorforqwen3asrfinetuning"
+      "norm_label": "_get_session()"
     },
     {
-      "label": ".__call__()",
+      "label": "_calculate_rms()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L119",
-      "id": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning_call",
+      "source_file": "g.py",
+      "source_location": "L130",
+      "id": "g_calculate_rms",
       "community": 8,
-      "norm_label": ".__call__()"
+      "norm_label": "_calculate_rms()"
     },
     {
-      "label": "CastFloatInputsTrainer",
+      "label": "_process_vad_and_asr()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L156",
-      "id": "qwen3_asr_sft_castfloatinputstrainer",
+      "source_file": "g.py",
+      "source_location": "L144",
+      "id": "g_process_vad_and_asr",
       "community": 8,
-      "norm_label": "castfloatinputstrainer"
+      "norm_label": "_process_vad_and_asr()"
     },
     {
-      "label": "Trainer",
+      "label": "api_start()",
       "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "id": "trainer",
+      "source_file": "g.py",
+      "source_location": "L223",
+      "id": "g_api_start",
       "community": 8,
-      "norm_label": "trainer"
+      "norm_label": "api_start()"
     },
     {
-      "label": "._prepare_inputs()",
+      "label": "api_chunk()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L157",
-      "id": "qwen3_asr_sft_castfloatinputstrainer_prepare_inputs",
+      "source_file": "g.py",
+      "source_location": "L237",
+      "id": "g_api_chunk",
       "community": 8,
-      "norm_label": "._prepare_inputs()"
+      "norm_label": "api_chunk()"
     },
     {
-      "label": "copy_required_hf_files_for_qwen_asr()",
+      "label": "api_finish()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L167",
-      "id": "qwen3_asr_sft_copy_required_hf_files_for_qwen_asr",
+      "source_file": "g.py",
+      "source_location": "L301",
+      "id": "g_api_finish",
       "community": 8,
-      "norm_label": "copy_required_hf_files_for_qwen_asr()"
-    },
-    {
-      "label": "MakeEveryCheckpointInferableCallback",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L187",
-      "id": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "community": 8,
-      "norm_label": "makeeverycheckpointinferablecallback"
-    },
-    {
-      "label": "TrainerCallback",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "id": "trainercallback",
-      "community": 8,
-      "norm_label": "trainercallback"
-    },
-    {
-      "label": ".__init__()",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L188",
-      "id": "qwen3_asr_sft_makeeverycheckpointinferablecallback_init",
-      "community": 8,
-      "norm_label": ".__init__()"
-    },
-    {
-      "label": ".on_save()",
-      "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L191",
-      "id": "qwen3_asr_sft_makeeverycheckpointinferablecallback_on_save",
-      "community": 8,
-      "norm_label": ".on_save()"
+      "norm_label": "api_finish()"
     },
     {
       "label": "parse_args()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L203",
-      "id": "qwen3_asr_sft_parse_args",
+      "source_file": "g.py",
+      "source_location": "L326",
+      "id": "g_parse_args",
       "community": 8,
       "norm_label": "parse_args()"
     },
     {
       "label": "main()",
       "file_type": "code",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L242",
-      "id": "qwen3_asr_sft_main",
+      "source_file": "g.py",
+      "source_location": "L341",
+      "id": "g_main",
       "community": 8,
       "norm_label": "main()"
+    },
+    {
+      "label": "\u5e26 RMS VAD \u72b6\u6001\u7684\u6d41\u5f0f\u4f1a\u8bdd\u3002      \u5c5e\u6027:         state: init_streaming_state() \u8fd4\u56de\u7684 ASR \u6d41\u5f0f\u72b6",
+      "file_type": "rationale",
+      "source_file": "g.py",
+      "source_location": "L32",
+      "id": "g_rationale_32",
+      "community": 8,
+      "norm_label": "\u5e26 rms vad \u72b6\u6001\u7684\u6d41\u5f0f\u4f1a\u8bdd\u3002      \u5c5e\u6027:         state: init_streaming_state() \u8fd4\u56de\u7684 asr \u6d41\u5f0f\u72b6"
+    },
+    {
+      "label": "\u5783\u573e\u56de\u6536\u8fc7\u671f\u7684\u4f1a\u8bdd\u3002      \u4e24\u79cd\u8fc7\u671f\u7c7b\u578b:     1. NO_AUDIO_TIMEOUT_SEC (3 \u79d2): \u672a\u6536\u5230\u8bed\u97f3\u5305 -> \u81ea\u52a8\u7ed3\u675f\u5e76\u79fb\u9664",
+      "file_type": "rationale",
+      "source_file": "g.py",
+      "source_location": "L80",
+      "id": "g_rationale_80",
+      "community": 8,
+      "norm_label": "\u5783\u573e\u56de\u6536\u8fc7\u671f\u7684\u4f1a\u8bdd\u3002      \u4e24\u79cd\u8fc7\u671f\u7c7b\u578b:     1. no_audio_timeout_sec (3 \u79d2): \u672a\u6536\u5230\u8bed\u97f3\u5305 -> \u81ea\u52a8\u7ed3\u675f\u5e76\u79fb\u9664"
+    },
+    {
+      "label": "\u83b7\u53d6\u73b0\u6709\u4f1a\u8bdd\uff0c\u4e0d\u5b58\u5728\u5219\u8fd4\u56de None\u3002      \u53c2\u6570:         session_id: \u4f1a\u8bddID         update_last_se",
+      "file_type": "rationale",
+      "source_file": "g.py",
+      "source_location": "L116",
+      "id": "g_rationale_116",
+      "community": 8,
+      "norm_label": "\u83b7\u53d6\u73b0\u6709\u4f1a\u8bdd,\u4e0d\u5b58\u5728\u5219\u8fd4\u56de none\u3002      \u53c2\u6570:         session_id: \u4f1a\u8bddid         update_last_se"
+    },
+    {
+      "label": "\u8ba1\u7b97\u97f3\u9891\u5207\u7247\u7684 RMS\uff08\u5747\u65b9\u6839\uff09\u80fd\u91cf\u3002      RMS = sqrt(mean(samples\u00b2))      RMS \u8d8a\u9ad8 = \u58f0\u97f3\u8d8a\u5927/\u8d8a\u6d3b\u8dc3",
+      "file_type": "rationale",
+      "source_file": "g.py",
+      "source_location": "L131",
+      "id": "g_rationale_131",
+      "community": 8,
+      "norm_label": "\u8ba1\u7b97\u97f3\u9891\u5207\u7247\u7684 rms(\u5747\u65b9\u6839)\u80fd\u91cf\u3002      rms = sqrt(mean(samples2))      rms \u8d8a\u9ad8 = \u58f0\u97f3\u8d8a\u5927/\u8d8a\u6d3b\u8dc3"
+    },
+    {
+      "label": "\u4f7f\u7528 RMS VAD \u548c\u6d41\u5f0f ASR \u5904\u7406\u97f3\u9891\u5207\u7247\u3002      \u8fd4\u56de:         (is_speech, finalized_sentence, i",
+      "file_type": "rationale",
+      "source_file": "g.py",
+      "source_location": "L148",
+      "id": "g_rationale_148",
+      "community": 8,
+      "norm_label": "\u4f7f\u7528 rms vad \u548c\u6d41\u5f0f asr \u5904\u7406\u97f3\u9891\u5207\u7247\u3002      \u8fd4\u56de:         (is_speech, finalized_sentence, i"
     },
     {
       "label": "__init__.py",
@@ -624,7 +153,7 @@
       "source_file": "qwen_asr\\__init__.py",
       "source_location": "L1",
       "id": "qwen_asr_init_py",
-      "community": 0,
+      "community": 4,
       "norm_label": "__init__.py"
     },
     {
@@ -633,7 +162,7 @@
       "source_file": "qwen_asr\\__main__.py",
       "source_location": "L1",
       "id": "qwen_asr_main_py",
-      "community": 21,
+      "community": 13,
       "norm_label": "__main__.py"
     },
     {
@@ -642,7 +171,7 @@
       "source_file": "qwen_asr\\__main__.py",
       "source_location": "L16",
       "id": "main_main",
-      "community": 21,
+      "community": 13,
       "norm_label": "main()"
     },
     {
@@ -651,7 +180,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L1",
       "id": "qwen_asr_cli_demo_py",
-      "community": 7,
+      "community": 6,
       "norm_label": "demo.py"
     },
     {
@@ -660,7 +189,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L34",
       "id": "demo_title_case_display",
-      "community": 7,
+      "community": 6,
       "norm_label": "_title_case_display()"
     },
     {
@@ -669,7 +198,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L40",
       "id": "demo_build_choices_and_map",
-      "community": 7,
+      "community": 6,
       "norm_label": "_build_choices_and_map()"
     },
     {
@@ -678,7 +207,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L48",
       "id": "demo_dtype_from_str",
-      "community": 7,
+      "community": 6,
       "norm_label": "_dtype_from_str()"
     },
     {
@@ -687,7 +216,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L59",
       "id": "demo_normalize_audio",
-      "community": 7,
+      "community": 6,
       "norm_label": "_normalize_audio()"
     },
     {
@@ -696,7 +225,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L86",
       "id": "demo_audio_to_tuple",
-      "community": 7,
+      "community": 6,
       "norm_label": "_audio_to_tuple()"
     },
     {
@@ -705,7 +234,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L115",
       "id": "demo_parse_audio_any",
-      "community": 7,
+      "community": 6,
       "norm_label": "_parse_audio_any()"
     },
     {
@@ -714,7 +243,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L124",
       "id": "demo_build_parser",
-      "community": 7,
+      "community": 6,
       "norm_label": "build_parser()"
     },
     {
@@ -723,7 +252,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L208",
       "id": "demo_parse_json_dict",
-      "community": 7,
+      "community": 6,
       "norm_label": "_parse_json_dict()"
     },
     {
@@ -732,7 +261,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L220",
       "id": "demo_apply_cuda_visible_devices",
-      "community": 7,
+      "community": 6,
       "norm_label": "_apply_cuda_visible_devices()"
     },
     {
@@ -741,7 +270,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L227",
       "id": "demo_default_backend_kwargs",
-      "community": 7,
+      "community": 6,
       "norm_label": "_default_backend_kwargs()"
     },
     {
@@ -750,7 +279,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L243",
       "id": "demo_default_aligner_kwargs",
-      "community": 7,
+      "community": 6,
       "norm_label": "_default_aligner_kwargs()"
     },
     {
@@ -759,7 +288,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L250",
       "id": "demo_merge_dicts",
-      "community": 7,
+      "community": 6,
       "norm_label": "_merge_dicts()"
     },
     {
@@ -768,7 +297,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L256",
       "id": "demo_coerce_special_types",
-      "community": 7,
+      "community": 6,
       "norm_label": "_coerce_special_types()"
     },
     {
@@ -777,7 +306,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L266",
       "id": "demo_make_timestamp_html",
-      "community": 7,
+      "community": 6,
       "norm_label": "_make_timestamp_html()"
     },
     {
@@ -786,7 +315,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L345",
       "id": "demo_build_demo",
-      "community": 7,
+      "community": 6,
       "norm_label": "build_demo()"
     },
     {
@@ -795,7 +324,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L480",
       "id": "demo_main",
-      "community": 7,
+      "community": 6,
       "norm_label": "main()"
     },
     {
@@ -804,7 +333,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L87",
       "id": "demo_rationale_87",
-      "community": 7,
+      "community": 6,
       "norm_label": "accept gradio audio:       - {\"sampling_rate\": int, \"data\": np.ndarray}"
     },
     {
@@ -813,7 +342,7 @@
       "source_file": "qwen_asr\\cli\\demo.py",
       "source_location": "L267",
       "id": "demo_rationale_267",
-      "community": 7,
+      "community": 6,
       "norm_label": "build html with per-token audio slices, using base64 data urls.     expect time"
     },
     {
@@ -822,7 +351,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L1",
       "id": "qwen_asr_cli_demo_streaming_py",
-      "community": 18,
+      "community": 10,
       "norm_label": "demo_streaming.py"
     },
     {
@@ -831,7 +360,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L39",
       "id": "demo_streaming_session",
-      "community": 18,
+      "community": 10,
       "norm_label": "session"
     },
     {
@@ -840,7 +369,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L56",
       "id": "demo_streaming_gc_sessions",
-      "community": 18,
+      "community": 10,
       "norm_label": "_gc_sessions()"
     },
     {
@@ -849,7 +378,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L67",
       "id": "demo_streaming_get_session",
-      "community": 18,
+      "community": 10,
       "norm_label": "_get_session()"
     },
     {
@@ -858,7 +387,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L413",
       "id": "demo_streaming_index",
-      "community": 18,
+      "community": 10,
       "norm_label": "index()"
     },
     {
@@ -867,7 +396,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L418",
       "id": "demo_streaming_api_start",
-      "community": 18,
+      "community": 10,
       "norm_label": "api_start()"
     },
     {
@@ -876,7 +405,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L431",
       "id": "demo_streaming_api_chunk",
-      "community": 18,
+      "community": 10,
       "norm_label": "api_chunk()"
     },
     {
@@ -885,7 +414,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L457",
       "id": "demo_streaming_api_finish",
-      "community": 18,
+      "community": 10,
       "norm_label": "api_finish()"
     },
     {
@@ -894,7 +423,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L472",
       "id": "demo_streaming_parse_args",
-      "community": 18,
+      "community": 10,
       "norm_label": "parse_args()"
     },
     {
@@ -903,7 +432,7 @@
       "source_file": "qwen_asr\\cli\\demo_streaming.py",
       "source_location": "L485",
       "id": "demo_streaming_main",
-      "community": 18,
+      "community": 10,
       "norm_label": "main()"
     },
     {
@@ -912,7 +441,7 @@
       "source_file": "qwen_asr\\cli\\serve.py",
       "source_location": "L1",
       "id": "qwen_asr_cli_serve_py",
-      "community": 22,
+      "community": 14,
       "norm_label": "serve.py"
     },
     {
@@ -921,7 +450,7 @@
       "source_file": "qwen_asr\\cli\\serve.py",
       "source_location": "L40",
       "id": "serve_main",
-      "community": 22,
+      "community": 14,
       "norm_label": "main()"
     },
     {
@@ -930,7 +459,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L1",
       "id": "qwen_asr_core_transformers_backend_configuration_qwen3_asr_py",
-      "community": 11,
+      "community": 0,
       "norm_label": "configuration_qwen3_asr.py"
     },
     {
@@ -939,7 +468,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L22",
       "id": "configuration_qwen3_asr_qwen3asraudioencoderconfig",
-      "community": 14,
+      "community": 2,
       "norm_label": "qwen3asraudioencoderconfig"
     },
     {
@@ -948,7 +477,7 @@
       "source_file": "",
       "source_location": "",
       "id": "pretrainedconfig",
-      "community": 9,
+      "community": 11,
       "norm_label": "pretrainedconfig"
     },
     {
@@ -957,7 +486,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L83",
       "id": "configuration_qwen3_asr_qwen3asraudioencoderconfig_init",
-      "community": 14,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -966,7 +495,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L126",
       "id": "configuration_qwen3_asr_qwen3asrtextconfig",
-      "community": 9,
+      "community": 11,
       "norm_label": "qwen3asrtextconfig"
     },
     {
@@ -975,7 +504,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L230",
       "id": "configuration_qwen3_asr_qwen3asrtextconfig_init",
-      "community": 9,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -984,7 +513,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L280",
       "id": "configuration_qwen3_asr_qwen3asrthinkerconfig",
-      "community": 9,
+      "community": 0,
       "norm_label": "qwen3asrthinkerconfig"
     },
     {
@@ -993,7 +522,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L329",
       "id": "configuration_qwen3_asr_qwen3asrthinkerconfig_init",
-      "community": 9,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -1002,7 +531,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L358",
       "id": "configuration_qwen3_asr_qwen3asrconfig",
-      "community": 10,
+      "community": 0,
       "norm_label": "qwen3asrconfig"
     },
     {
@@ -1011,7 +540,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L397",
       "id": "configuration_qwen3_asr_qwen3asrconfig_init",
-      "community": 9,
+      "community": 11,
       "norm_label": ".__init__()"
     },
     {
@@ -1020,7 +549,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L410",
       "id": "configuration_qwen3_asr_qwen3asrconfig_get_text_config",
-      "community": 10,
+      "community": 0,
       "norm_label": ".get_text_config()"
     },
     {
@@ -1029,7 +558,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L23",
       "id": "configuration_qwen3_asr_rationale_23",
-      "community": 14,
+      "community": 2,
       "norm_label": "r\"\"\"     this is the configuration class to store the configuration of a [`qwen"
     },
     {
@@ -1038,7 +567,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L127",
       "id": "configuration_qwen3_asr_rationale_127",
-      "community": 9,
+      "community": 11,
       "norm_label": "r\"\"\"     this is the configuration class to store the configuration of a [`qwen"
     },
     {
@@ -1047,7 +576,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L281",
       "id": "configuration_qwen3_asr_rationale_281",
-      "community": 9,
+      "community": 0,
       "norm_label": "r\"\"\"     this is the configuration class to store the configuration of a [`qwen"
     },
     {
@@ -1056,7 +585,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L359",
       "id": "configuration_qwen3_asr_rationale_359",
-      "community": 10,
+      "community": 0,
       "norm_label": "this is the configuration class to store the configuration of a [`qwen3asrforcon"
     },
     {
@@ -1065,7 +594,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\configuration_qwen3_asr.py",
       "source_location": "L411",
       "id": "configuration_qwen3_asr_rationale_411",
-      "community": 10,
+      "community": 0,
       "norm_label": "returns the config that is meant to be used with text io. on most models, it is"
     },
     {
@@ -1074,7 +603,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1",
       "id": "qwen_asr_core_transformers_backend_modeling_qwen3_asr_py",
-      "community": 11,
+      "community": 0,
       "norm_label": "modeling_qwen3_asr.py"
     },
     {
@@ -1083,7 +612,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L51",
       "id": "modeling_qwen3_asr_qwen3asrtextrmsnorm",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asrtextrmsnorm"
     },
     {
@@ -1092,7 +621,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L52",
       "id": "modeling_qwen3_asr_qwen3asrtextrmsnorm_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1101,7 +630,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L60",
       "id": "modeling_qwen3_asr_qwen3asrtextrmsnorm_forward",
-      "community": 4,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1110,7 +639,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L67",
       "id": "modeling_qwen3_asr_qwen3asrtextrmsnorm_extra_repr",
-      "community": 4,
+      "community": 0,
       "norm_label": ".extra_repr()"
     },
     {
@@ -1119,7 +648,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L71",
       "id": "modeling_qwen3_asr_rotate_half",
-      "community": 11,
+      "community": 0,
       "norm_label": "rotate_half()"
     },
     {
@@ -1128,7 +657,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L78",
       "id": "modeling_qwen3_asr_repeat_kv",
-      "community": 11,
+      "community": 0,
       "norm_label": "repeat_kv()"
     },
     {
@@ -1137,7 +666,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L90",
       "id": "modeling_qwen3_asr_eager_attention_forward",
-      "community": 11,
+      "community": 0,
       "norm_label": "eager_attention_forward()"
     },
     {
@@ -1146,7 +675,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L116",
       "id": "modeling_qwen3_asr_apply_rotary_pos_emb",
-      "community": 11,
+      "community": 0,
       "norm_label": "apply_rotary_pos_emb()"
     },
     {
@@ -1155,7 +684,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L143",
       "id": "modeling_qwen3_asr_qwen3asrtextattention",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asrtextattention"
     },
     {
@@ -1164,7 +693,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L146",
       "id": "modeling_qwen3_asr_qwen3asrtextattention_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1173,7 +702,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L176",
       "id": "modeling_qwen3_asr_forward",
-      "community": 15,
+      "community": 7,
       "norm_label": "forward()"
     },
     {
@@ -1182,7 +711,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L220",
       "id": "modeling_qwen3_asr_qwen3asrtextmlp",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asrtextmlp"
     },
     {
@@ -1191,7 +720,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L221",
       "id": "modeling_qwen3_asr_qwen3asrtextmlp_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1200,7 +729,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L231",
       "id": "modeling_qwen3_asr_qwen3asrtextmlp_forward",
-      "community": 4,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1209,7 +738,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L236",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextdecoderlayer",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextdecoderlayer"
     },
     {
@@ -1218,7 +747,7 @@
       "source_file": "",
       "source_location": "",
       "id": "gradientcheckpointinglayer",
-      "community": 4,
+      "community": 0,
       "norm_label": "gradientcheckpointinglayer"
     },
     {
@@ -1227,7 +756,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L237",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextdecoderlayer_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1236,7 +765,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L283",
       "id": "modeling_qwen3_asr_qwen3asrpretrainedmodel",
-      "community": 13,
+      "community": 0,
       "norm_label": "qwen3asrpretrainedmodel"
     },
     {
@@ -1245,7 +774,7 @@
       "source_file": "",
       "source_location": "",
       "id": "pretrainedmodel",
-      "community": 13,
+      "community": 0,
       "norm_label": "pretrainedmodel"
     },
     {
@@ -1254,7 +783,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L299",
       "id": "modeling_qwen3_asr_qwen3asrthinkercausallmoutputwithpast",
-      "community": 10,
+      "community": 0,
       "norm_label": "qwen3asrthinkercausallmoutputwithpast"
     },
     {
@@ -1263,7 +792,7 @@
       "source_file": "",
       "source_location": "",
       "id": "moecausallmoutputwithpast",
-      "community": 10,
+      "community": 0,
       "norm_label": "moecausallmoutputwithpast"
     },
     {
@@ -1272,7 +801,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L309",
       "id": "modeling_qwen3_asr_get_feat_extract_output_lengths",
-      "community": 15,
+      "community": 7,
       "norm_label": "_get_feat_extract_output_lengths()"
     },
     {
@@ -1281,7 +810,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L320",
       "id": "modeling_qwen3_asr_qwen3asrpretrainedmodelforconditionalgeneration",
-      "community": 14,
+      "community": 7,
       "norm_label": "qwen3asrpretrainedmodelforconditionalgeneration"
     },
     {
@@ -1290,7 +819,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L321",
       "id": "modeling_qwen3_asr_qwen3asrpretrainedmodelforconditionalgeneration_prepare_4d_causal_attention_mask_with_cache_position",
-      "community": 14,
+      "community": 7,
       "norm_label": "._prepare_4d_causal_attention_mask_with_cache_position()"
     },
     {
@@ -1299,7 +828,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L377",
       "id": "modeling_qwen3_asr_qwen3asrpretrainedmodelforconditionalgeneration_get_chunked_index",
-      "community": 14,
+      "community": 7,
       "norm_label": ".get_chunked_index()"
     },
     {
@@ -1308,7 +837,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L414",
       "id": "modeling_qwen3_asr_qwen3asrpretrainedmodelforconditionalgeneration_get_rope_index",
-      "community": 14,
+      "community": 7,
       "norm_label": ".get_rope_index()"
     },
     {
@@ -1317,7 +846,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L451",
       "id": "modeling_qwen3_asr_qwen3asraudioattention",
-      "community": 10,
+      "community": 0,
       "norm_label": "qwen3asraudioattention"
     },
     {
@@ -1326,7 +855,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L454",
       "id": "modeling_qwen3_asr_qwen3asraudioattention_init",
-      "community": 10,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1335,7 +864,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L477",
       "id": "modeling_qwen3_asr_qwen3asraudioattention_forward",
-      "community": 10,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1344,7 +873,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L523",
       "id": "modeling_qwen3_asr_qwen3asraudioencoderlayer",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asraudioencoderlayer"
     },
     {
@@ -1353,7 +882,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L524",
       "id": "modeling_qwen3_asr_qwen3asraudioencoderlayer_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1362,7 +891,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L536",
       "id": "modeling_qwen3_asr_qwen3asraudioencoderlayer_forward",
-      "community": 4,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1371,7 +900,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L579",
       "id": "modeling_qwen3_asr_sinusoidspositionembedding",
-      "community": 4,
+      "community": 0,
       "norm_label": "sinusoidspositionembedding"
     },
     {
@@ -1380,7 +909,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L580",
       "id": "modeling_qwen3_asr_sinusoidspositionembedding_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1389,7 +918,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L593",
       "id": "modeling_qwen3_asr_sinusoidspositionembedding_forward",
-      "community": 4,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1398,7 +927,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L603",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder",
-      "community": 13,
+      "community": 0,
       "norm_label": "qwen3asraudioencoder"
     },
     {
@@ -1407,7 +936,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L609",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1416,7 +945,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L638",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder_freeze_parameters",
-      "community": 13,
+      "community": 0,
       "norm_label": "._freeze_parameters()"
     },
     {
@@ -1425,7 +954,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L643",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder_get_input_embeddings",
-      "community": 13,
+      "community": 0,
       "norm_label": ".get_input_embeddings()"
     },
     {
@@ -1434,7 +963,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L646",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder_set_input_embeddings",
-      "community": 13,
+      "community": 0,
       "norm_label": ".set_input_embeddings()"
     },
     {
@@ -1443,7 +972,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L649",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder_prepare_attention_mask",
-      "community": 13,
+      "community": 0,
       "norm_label": "._prepare_attention_mask()"
     },
     {
@@ -1452,7 +981,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L742",
       "id": "modeling_qwen3_asr_qwen3asraudioencoder_padded_and_mask_function",
-      "community": 13,
+      "community": 0,
       "norm_label": ".padded_and_mask_function()"
     },
     {
@@ -1461,7 +990,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L781",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrotaryembedding",
-      "community": 20,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextrotaryembedding"
     },
     {
@@ -1470,7 +999,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L784",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrotaryembedding_init",
-      "community": 20,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1479,7 +1008,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L802",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrotaryembedding_apply_interleaved_mrope",
-      "community": 20,
+      "community": 0,
       "norm_label": ".apply_interleaved_mrope()"
     },
     {
@@ -1488,7 +1017,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L840",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextmlp",
-      "community": 11,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextmlp"
     },
     {
@@ -1497,7 +1026,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L841",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextmlp_init",
-      "community": 11,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1506,7 +1035,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L851",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextmlp_forward",
-      "community": 11,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1515,7 +1044,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L857",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrmsnorm",
-      "community": 9,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextrmsnorm"
     },
     {
@@ -1524,7 +1053,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L858",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrmsnorm_init",
-      "community": 9,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1533,7 +1062,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L866",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrmsnorm_forward",
-      "community": 9,
+      "community": 0,
       "norm_label": ".forward()"
     },
     {
@@ -1542,7 +1071,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L873",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextrmsnorm_extra_repr",
-      "community": 9,
+      "community": 0,
       "norm_label": ".extra_repr()"
     },
     {
@@ -1551,7 +1080,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L877",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextattention",
-      "community": 9,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextattention"
     },
     {
@@ -1560,7 +1089,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L880",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextattention_init",
-      "community": 9,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1569,7 +1098,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L961",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextmodel",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextmodel"
     },
     {
@@ -1578,7 +1107,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L970",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextmodel_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1587,7 +1116,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1067",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration",
-      "community": 15,
+      "community": 7,
       "norm_label": "qwen3asrthinkerforconditionalgeneration"
     },
     {
@@ -1596,7 +1125,7 @@
       "source_file": "",
       "source_location": "",
       "id": "generationmixin",
-      "community": 13,
+      "community": 0,
       "norm_label": "generationmixin"
     },
     {
@@ -1605,7 +1134,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1080",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration_init",
-      "community": 4,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -1614,7 +1143,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1093",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration_get_input_embeddings",
-      "community": 15,
+      "community": 7,
       "norm_label": ".get_input_embeddings()"
     },
     {
@@ -1623,7 +1152,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1096",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration_set_input_embeddings",
-      "community": 15,
+      "community": 7,
       "norm_label": ".set_input_embeddings()"
     },
     {
@@ -1632,7 +1161,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1099",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration_get_audio_features",
-      "community": 15,
+      "community": 7,
       "norm_label": ".get_audio_features()"
     },
     {
@@ -1641,7 +1170,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1135",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration_get_placeholder_mask",
-      "community": 15,
+      "community": 7,
       "norm_label": ".get_placeholder_mask()"
     },
     {
@@ -1650,7 +1179,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1258",
       "id": "modeling_qwen3_asr_qwen3asrthinkerforconditionalgeneration_prepare_inputs_for_generation",
-      "community": 15,
+      "community": 7,
       "norm_label": ".prepare_inputs_for_generation()"
     },
     {
@@ -1659,7 +1188,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1293",
       "id": "modeling_qwen3_asr_qwen3asrthinkertextpretrainedmodel",
-      "community": 13,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextpretrainedmodel"
     },
     {
@@ -1668,7 +1197,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1311",
       "id": "modeling_qwen3_asr_qwen3asrforconditionalgeneration",
-      "community": 13,
+      "community": 0,
       "norm_label": "qwen3asrforconditionalgeneration"
     },
     {
@@ -1677,7 +1206,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1314",
       "id": "modeling_qwen3_asr_qwen3asrforconditionalgeneration_init",
-      "community": 4,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -1686,7 +1215,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1321",
       "id": "modeling_qwen3_asr_qwen3asrforconditionalgeneration_get_support_languages",
-      "community": 13,
+      "community": 0,
       "norm_label": ".get_support_languages()"
     },
     {
@@ -1695,7 +1224,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1325",
       "id": "modeling_qwen3_asr_generate",
-      "community": 11,
+      "community": 0,
       "norm_label": "generate()"
     },
     {
@@ -1704,7 +1233,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L53",
       "id": "modeling_qwen3_asr_rationale_53",
-      "community": 4,
+      "community": 0,
       "norm_label": "qwen3asrtextrmsnorm is equivalent to t5layernorm"
     },
     {
@@ -1713,7 +1242,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L72",
       "id": "modeling_qwen3_asr_rationale_72",
-      "community": 11,
+      "community": 0,
       "norm_label": "rotates half the hidden dims of the input."
     },
     {
@@ -1722,7 +1251,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L79",
       "id": "modeling_qwen3_asr_rationale_79",
-      "community": 11,
+      "community": 0,
       "norm_label": "this is the equivalent of torch.repeat_interleave(x, dim=1, repeats=n_rep). the"
     },
     {
@@ -1731,7 +1260,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L117",
       "id": "modeling_qwen3_asr_rationale_117",
-      "community": 11,
+      "community": 0,
       "norm_label": "applies rotary position embedding to the query and key tensors.      args:"
     },
     {
@@ -1740,7 +1269,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L144",
       "id": "modeling_qwen3_asr_rationale_144",
-      "community": 4,
+      "community": 0,
       "norm_label": "multi-headed attention from 'attention is all you need' paper"
     },
     {
@@ -1749,7 +1278,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L300",
       "id": "modeling_qwen3_asr_rationale_300",
-      "community": 10,
+      "community": 0,
       "norm_label": "r\"\"\"     args:         rope_deltas (`torch.longtensor` of shape `(batch_size,"
     },
     {
@@ -1758,7 +1287,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L310",
       "id": "modeling_qwen3_asr_rationale_310",
-      "community": 15,
+      "community": 7,
       "norm_label": "computes the output length of the convolutional layers and the output length of"
     },
     {
@@ -1767,7 +1296,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L332",
       "id": "modeling_qwen3_asr_rationale_332",
-      "community": 14,
+      "community": 7,
       "norm_label": "creates a causal 4d mask of shape `(batch_size, 1, query_length, key_value_lengt"
     },
     {
@@ -1776,7 +1305,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L380",
       "id": "modeling_qwen3_asr_rationale_380",
-      "community": 14,
+      "community": 7,
       "norm_label": "splits token index list into chunks based on token value ranges.          give"
     },
     {
@@ -1785,7 +1314,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L418",
       "id": "modeling_qwen3_asr_rationale_418",
-      "community": 14,
+      "community": 7,
       "norm_label": "calculate the rope index in llm.          explanation:             each embed"
     },
     {
@@ -1794,7 +1323,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L452",
       "id": "modeling_qwen3_asr_rationale_452",
-      "community": 10,
+      "community": 0,
       "norm_label": "multi-headed attention from 'attention is all you need' paper"
     },
     {
@@ -1803,7 +1332,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L484",
       "id": "modeling_qwen3_asr_rationale_484",
-      "community": 10,
+      "community": 0,
       "norm_label": "input shape: batch x time x channel"
     },
     {
@@ -1812,7 +1341,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L543",
       "id": "modeling_qwen3_asr_rationale_543",
-      "community": 4,
+      "community": 0,
       "norm_label": "args:             hidden_states (`torch.floattensor`): input to the layer of sh"
     },
     {
@@ -1821,7 +1350,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L675",
       "id": "modeling_qwen3_asr_rationale_675",
-      "community": 14,
+      "community": 0,
       "norm_label": "r\"\"\"         feature_lens (`torch.longtensor` of shape `(batch_size,)`):"
     },
     {
@@ -1830,7 +1359,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L743",
       "id": "modeling_qwen3_asr_rationale_743",
-      "community": 13,
+      "community": 0,
       "norm_label": "pads a sequence of tensors to their maximum length on indicated `padding_side`."
     },
     {
@@ -1839,7 +1368,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L803",
       "id": "modeling_qwen3_asr_rationale_803",
-      "community": 20,
+      "community": 0,
       "norm_label": "apply interleaved mrope to 3d rotary embeddings.         reorganizes frequency"
     },
     {
@@ -1848,7 +1377,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L859",
       "id": "modeling_qwen3_asr_rationale_859",
-      "community": 9,
+      "community": 0,
       "norm_label": "qwen3asrthinkertextrmsnorm is equivalent to t5layernorm"
     },
     {
@@ -1857,7 +1386,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L878",
       "id": "modeling_qwen3_asr_rationale_878",
-      "community": 9,
+      "community": 0,
       "norm_label": "multi-headed attention from 'attention is all you need' paper"
     },
     {
@@ -1866,7 +1395,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1105",
       "id": "modeling_qwen3_asr_rationale_1105",
-      "community": 15,
+      "community": 7,
       "norm_label": "encodes audios into continuous embeddings that can be forwarded to the language"
     },
     {
@@ -1875,7 +1404,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1140",
       "id": "modeling_qwen3_asr_rationale_1140",
-      "community": 15,
+      "community": 7,
       "norm_label": "obtains multimodal placeholder mask from `input_ids` or `inputs_embeds`, and che"
     },
     {
@@ -1884,7 +1413,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L1175",
       "id": "modeling_qwen3_asr_rationale_1175",
-      "community": 10,
+      "community": 0,
       "norm_label": "r\"\"\"         feature_attention_mask (`torch.tensor` of shape `(batch_size, feat"
     },
     {
@@ -1893,7 +1422,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\modeling_qwen3_asr.py",
       "source_location": "L651",
       "id": "modeling_qwen3_asr_rationale_651",
-      "community": 11,
+      "community": 0,
       "norm_label": "# note: the created attention masl only approximates the ragged fa2 attention by"
     },
     {
@@ -1902,7 +1431,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\processing_qwen3_asr.py",
       "source_location": "L1",
       "id": "qwen_asr_core_transformers_backend_processing_qwen3_asr_py",
-      "community": 2,
+      "community": 12,
       "norm_label": "processing_qwen3_asr.py"
     },
     {
@@ -1911,7 +1440,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\processing_qwen3_asr.py",
       "source_location": "L25",
       "id": "processing_qwen3_asr_qwen3asrprocessorkwargs",
-      "community": 2,
+      "community": 12,
       "norm_label": "qwen3asrprocessorkwargs"
     },
     {
@@ -1920,7 +1449,7 @@
       "source_file": "",
       "source_location": "",
       "id": "processingkwargs",
-      "community": 2,
+      "community": 12,
       "norm_label": "processingkwargs"
     },
     {
@@ -1929,7 +1458,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\processing_qwen3_asr.py",
       "source_location": "L39",
       "id": "processing_qwen3_asr_get_feat_extract_output_lengths",
-      "community": 2,
+      "community": 12,
       "norm_label": "_get_feat_extract_output_lengths()"
     },
     {
@@ -2001,7 +1530,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\processing_qwen3_asr.py",
       "source_location": "L197",
       "id": "processing_qwen3_asr_model_input_names",
-      "community": 2,
+      "community": 12,
       "norm_label": "model_input_names()"
     },
     {
@@ -2010,7 +1539,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\processing_qwen3_asr.py",
       "source_location": "L40",
       "id": "processing_qwen3_asr_rationale_40",
-      "community": 2,
+      "community": 12,
       "norm_label": "computes the output length of the convolutional layers and the output length of"
     },
     {
@@ -2046,7 +1575,7 @@
       "source_file": "qwen_asr\\core\\transformers_backend\\__init__.py",
       "source_location": "L1",
       "id": "qwen_asr_core_transformers_backend_init_py",
-      "community": 11,
+      "community": 0,
       "norm_label": "__init__.py"
     },
     {
@@ -2055,7 +1584,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L1",
       "id": "qwen_asr_core_vllm_backend_qwen3_asr_py",
-      "community": 1,
+      "community": 3,
       "norm_label": "qwen3_asr.py"
     },
     {
@@ -2064,7 +1593,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L115",
       "id": "qwen3_asr_get_feat_extract_output_lengths",
-      "community": 1,
+      "community": 3,
       "norm_label": "_get_feat_extract_output_lengths()"
     },
     {
@@ -2073,7 +1602,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L127",
       "id": "qwen3_asr_sinusoidspositionembedding",
-      "community": 10,
+      "community": 2,
       "norm_label": "sinusoidspositionembedding"
     },
     {
@@ -2091,7 +1620,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L153",
       "id": "qwen3_asr_sinusoidspositionembedding_forward",
-      "community": 10,
+      "community": 2,
       "norm_label": ".forward()"
     },
     {
@@ -2181,7 +1710,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L384",
       "id": "qwen3_asr_dtype",
-      "community": 1,
+      "community": 3,
       "norm_label": "dtype()"
     },
     {
@@ -2190,7 +1719,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L388",
       "id": "qwen3_asr_device",
-      "community": 1,
+      "community": 3,
       "norm_label": "device()"
     },
     {
@@ -2226,7 +1755,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L533",
       "id": "qwen3_asr_qwen3asrprocessinginfo",
-      "community": 1,
+      "community": 3,
       "norm_label": "qwen3asrprocessinginfo"
     },
     {
@@ -2235,7 +1764,7 @@
       "source_file": "",
       "source_location": "",
       "id": "baseprocessinginfo",
-      "community": 1,
+      "community": 3,
       "norm_label": "baseprocessinginfo"
     },
     {
@@ -2244,7 +1773,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L534",
       "id": "qwen3_asr_qwen3asrprocessinginfo_get_hf_config",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_hf_config()"
     },
     {
@@ -2253,7 +1782,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L537",
       "id": "qwen3_asr_qwen3asrprocessinginfo_get_hf_processor",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_hf_processor()"
     },
     {
@@ -2262,7 +1791,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L547",
       "id": "qwen3_asr_qwen3asrprocessinginfo_get_feature_extractor",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_feature_extractor()"
     },
     {
@@ -2271,7 +1800,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L553",
       "id": "qwen3_asr_qwen3asrprocessinginfo_get_supported_mm_limits",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_supported_mm_limits()"
     },
     {
@@ -2280,7 +1809,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L557",
       "id": "qwen3_asr_qwen3asrdummyinputsbuilder",
-      "community": 1,
+      "community": 3,
       "norm_label": "qwen3asrdummyinputsbuilder"
     },
     {
@@ -2289,7 +1818,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L558",
       "id": "qwen3_asr_qwen3asrdummyinputsbuilder_get_dummy_text",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_dummy_text()"
     },
     {
@@ -2298,7 +1827,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L566",
       "id": "qwen3_asr_qwen3asrdummyinputsbuilder_get_dummy_mm_data",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_dummy_mm_data()"
     },
     {
@@ -2307,7 +1836,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L595",
       "id": "qwen3_asr_qwen3asr_field_config",
-      "community": 1,
+      "community": 3,
       "norm_label": "_qwen3asr_field_config()"
     },
     {
@@ -2316,7 +1845,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L606",
       "id": "qwen3_asr_qwen3asrmultimodaldataparser",
-      "community": 1,
+      "community": 3,
       "norm_label": "qwen3asrmultimodaldataparser"
     },
     {
@@ -2325,7 +1854,7 @@
       "source_file": "",
       "source_location": "",
       "id": "multimodaldataparser",
-      "community": 1,
+      "community": 3,
       "norm_label": "multimodaldataparser"
     },
     {
@@ -2334,7 +1863,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L607",
       "id": "qwen3_asr_qwen3asrmultimodaldataparser_parse_audio_data",
-      "community": 1,
+      "community": 3,
       "norm_label": "._parse_audio_data()"
     },
     {
@@ -2343,7 +1872,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L622",
       "id": "qwen3_asr_qwen3asrmultimodalprocessor",
-      "community": 1,
+      "community": 3,
       "norm_label": "qwen3asrmultimodalprocessor"
     },
     {
@@ -2352,7 +1881,7 @@
       "source_file": "",
       "source_location": "",
       "id": "qwen3omnimoethinkermultimodalprocessor",
-      "community": 1,
+      "community": 3,
       "norm_label": "qwen3omnimoethinkermultimodalprocessor"
     },
     {
@@ -2361,7 +1890,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L625",
       "id": "qwen3_asr_qwen3asrmultimodalprocessor_get_data_parser",
-      "community": 1,
+      "community": 3,
       "norm_label": "._get_data_parser()"
     },
     {
@@ -2370,7 +1899,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L631",
       "id": "qwen3_asr_qwen3asrmultimodalprocessor_get_mm_fields_config",
-      "community": 1,
+      "community": 3,
       "norm_label": "._get_mm_fields_config()"
     },
     {
@@ -2379,7 +1908,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L638",
       "id": "qwen3_asr_qwen3asrmultimodalprocessor_get_prompt_updates",
-      "community": 1,
+      "community": 3,
       "norm_label": "._get_prompt_updates()"
     },
     {
@@ -2388,7 +1917,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L692",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration",
-      "community": 1,
+      "community": 9,
       "norm_label": "qwen3asrforconditionalgeneration"
     },
     {
@@ -2397,7 +1926,7 @@
       "source_file": "",
       "source_location": "",
       "id": "supportsmultimodal",
-      "community": 1,
+      "community": 9,
       "norm_label": "supportsmultimodal"
     },
     {
@@ -2406,7 +1935,7 @@
       "source_file": "",
       "source_location": "",
       "id": "supportspp",
-      "community": 1,
+      "community": 9,
       "norm_label": "supportspp"
     },
     {
@@ -2415,7 +1944,7 @@
       "source_file": "",
       "source_location": "",
       "id": "supportsmrope",
-      "community": 1,
+      "community": 9,
       "norm_label": "supportsmrope"
     },
     {
@@ -2424,7 +1953,7 @@
       "source_file": "",
       "source_location": "",
       "id": "supportstranscription",
-      "community": 1,
+      "community": 9,
       "norm_label": "supportstranscription"
     },
     {
@@ -2433,7 +1962,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L710",
       "id": "qwen3_asr_get_placeholder_str",
-      "community": 1,
+      "community": 3,
       "norm_label": "get_placeholder_str()"
     },
     {
@@ -2451,7 +1980,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L745",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_parse_and_validate_audio_input",
-      "community": 1,
+      "community": 9,
       "norm_label": "._parse_and_validate_audio_input()"
     },
     {
@@ -2460,7 +1989,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L761",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_parse_and_validate_multimodal_inputs",
-      "community": 1,
+      "community": 9,
       "norm_label": "._parse_and_validate_multimodal_inputs()"
     },
     {
@@ -2469,7 +1998,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L776",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_process_audio_input",
-      "community": 1,
+      "community": 9,
       "norm_label": "._process_audio_input()"
     },
     {
@@ -2478,7 +2007,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L794",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_get_language_model",
-      "community": 1,
+      "community": 9,
       "norm_label": ".get_language_model()"
     },
     {
@@ -2487,7 +2016,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L797",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_embed_multimodal",
-      "community": 1,
+      "community": 9,
       "norm_label": ".embed_multimodal()"
     },
     {
@@ -2496,7 +2025,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L815",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_embed_input_ids",
-      "community": 1,
+      "community": 9,
       "norm_label": ".embed_input_ids()"
     },
     {
@@ -2505,7 +2034,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L841",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_forward",
-      "community": 1,
+      "community": 9,
       "norm_label": ".forward()"
     },
     {
@@ -2514,7 +2043,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L861",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_compute_logits",
-      "community": 1,
+      "community": 9,
       "norm_label": ".compute_logits()"
     },
     {
@@ -2523,7 +2052,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L867",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_load_weights",
-      "community": 1,
+      "community": 9,
       "norm_label": ".load_weights()"
     },
     {
@@ -2532,7 +2061,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L876",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_get_mrope_input_positions",
-      "community": 1,
+      "community": 3,
       "norm_label": ".get_mrope_input_positions()"
     },
     {
@@ -2541,7 +2070,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L940",
       "id": "qwen3_asr_qwen3asrforconditionalgeneration_get_mm_mapping",
-      "community": 1,
+      "community": 9,
       "norm_label": ".get_mm_mapping()"
     },
     {
@@ -2550,7 +2079,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L950",
       "id": "qwen3_asr_get_speech_to_text_config",
-      "community": 1,
+      "community": 3,
       "norm_label": "get_speech_to_text_config()"
     },
     {
@@ -2559,7 +2088,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L961",
       "id": "qwen3_asr_get_generation_prompt",
-      "community": 1,
+      "community": 3,
       "norm_label": "get_generation_prompt()"
     },
     {
@@ -2568,7 +2097,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L128",
       "id": "qwen3_asr_rationale_128",
-      "community": 10,
+      "community": 2,
       "norm_label": "sinusoidal position embedding for audio encoder."
     },
     {
@@ -2640,7 +2169,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L941",
       "id": "qwen3_asr_rationale_941",
-      "community": 1,
+      "community": 9,
       "norm_label": "get the module prefix in multimodal models"
     },
     {
@@ -2658,7 +2187,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\qwen3_asr.py",
       "source_location": "L806",
       "id": "qwen3_asr_rationale_806",
-      "community": 1,
+      "community": 3,
       "norm_label": "# note: it is important to iterate over the keys in this dictionary"
     },
     {
@@ -2667,7 +2196,7 @@
       "source_file": "qwen_asr\\core\\vllm_backend\\__init__.py",
       "source_location": "L1",
       "id": "qwen_asr_core_vllm_backend_init_py",
-      "community": 1,
+      "community": 3,
       "norm_label": "__init__.py"
     },
     {
@@ -2676,7 +2205,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L1",
       "id": "qwen_asr_inference_qwen3_asr_py",
-      "community": 0,
+      "community": 1,
       "norm_label": "qwen3_asr.py"
     },
     {
@@ -2685,7 +2214,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L58",
       "id": "qwen3_asr_asrtranscription",
-      "community": 0,
+      "community": 1,
       "norm_label": "asrtranscription"
     },
     {
@@ -2694,7 +2223,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L78",
       "id": "qwen3_asr_asrstreamingstate",
-      "community": 0,
+      "community": 1,
       "norm_label": "asrstreamingstate"
     },
     {
@@ -2703,7 +2232,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L131",
       "id": "qwen3_asr_qwen3asrmodel",
-      "community": 0,
+      "community": 1,
       "norm_label": "qwen3asrmodel"
     },
     {
@@ -2712,7 +2241,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L145",
       "id": "qwen3_asr_qwen3asrmodel_init",
-      "community": 0,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -2721,7 +2250,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L176",
       "id": "qwen3_asr_from_pretrained",
-      "community": 0,
+      "community": 1,
       "norm_label": "from_pretrained()"
     },
     {
@@ -2730,7 +2259,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L227",
       "id": "qwen3_asr_llm",
-      "community": 0,
+      "community": 1,
       "norm_label": "llm()"
     },
     {
@@ -2739,7 +2268,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L290",
       "id": "qwen3_asr_qwen3asrmodel_get_supported_languages",
-      "community": 0,
+      "community": 1,
       "norm_label": ".get_supported_languages()"
     },
     {
@@ -2748,7 +2277,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L300",
       "id": "qwen3_asr_transcribe",
-      "community": 0,
+      "community": 1,
       "norm_label": "transcribe()"
     },
     {
@@ -2757,7 +2286,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L448",
       "id": "qwen3_asr_qwen3asrmodel_build_messages",
-      "community": 0,
+      "community": 1,
       "norm_label": "._build_messages()"
     },
     {
@@ -2766,7 +2295,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L454",
       "id": "qwen3_asr_qwen3asrmodel_build_text_prompt",
-      "community": 0,
+      "community": 1,
       "norm_label": "._build_text_prompt()"
     },
     {
@@ -2775,7 +2304,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L467",
       "id": "qwen3_asr_qwen3asrmodel_infer_asr",
-      "community": 0,
+      "community": 1,
       "norm_label": "._infer_asr()"
     },
     {
@@ -2784,7 +2313,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L490",
       "id": "qwen3_asr_qwen3asrmodel_infer_asr_transformers",
-      "community": 0,
+      "community": 1,
       "norm_label": "._infer_asr_transformers()"
     },
     {
@@ -2793,7 +2322,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L521",
       "id": "qwen3_asr_qwen3asrmodel_infer_asr_vllm",
-      "community": 0,
+      "community": 1,
       "norm_label": "._infer_asr_vllm()"
     },
     {
@@ -2802,7 +2331,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L539",
       "id": "qwen3_asr_qwen3asrmodel_offset_align_result",
-      "community": 0,
+      "community": 1,
       "norm_label": "._offset_align_result()"
     },
     {
@@ -2811,7 +2340,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L563",
       "id": "qwen3_asr_qwen3asrmodel_merge_align_results",
-      "community": 0,
+      "community": 1,
       "norm_label": "._merge_align_results()"
     },
     {
@@ -2820,7 +2349,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L584",
       "id": "qwen3_asr_qwen3asrmodel_init_streaming_state",
-      "community": 0,
+      "community": 1,
       "norm_label": ".init_streaming_state()"
     },
     {
@@ -2829,7 +2358,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L657",
       "id": "qwen3_asr_qwen3asrmodel_streaming_transcribe",
-      "community": 0,
+      "community": 1,
       "norm_label": ".streaming_transcribe()"
     },
     {
@@ -2838,7 +2367,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L767",
       "id": "qwen3_asr_qwen3asrmodel_finish_streaming_transcribe",
-      "community": 0,
+      "community": 1,
       "norm_label": ".finish_streaming_transcribe()"
     },
     {
@@ -2847,7 +2376,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L59",
       "id": "qwen3_asr_rationale_59",
-      "community": 0,
+      "community": 1,
       "norm_label": "one transcription result.      attributes:         language (str):"
     },
     {
@@ -2856,7 +2385,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L79",
       "id": "qwen3_asr_rationale_79",
-      "community": 0,
+      "community": 1,
       "norm_label": "streaming asr state for one audio stream (single utterance).      attributes:"
     },
     {
@@ -2865,7 +2394,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L132",
       "id": "qwen3_asr_rationale_132",
-      "community": 0,
+      "community": 1,
       "norm_label": "unified inference wrapper for qwen3-asr with two backends:       - transformers"
     },
     {
@@ -2874,7 +2403,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L185",
       "id": "qwen3_asr_rationale_185",
-      "community": 0,
+      "community": 1,
       "norm_label": "initialize using transformers backend.          args:             pretrained_"
     },
     {
@@ -2883,7 +2412,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L236",
       "id": "qwen3_asr_rationale_236",
-      "community": 0,
+      "community": 1,
       "norm_label": "initialize using vllm backend.          import is isolated to keep vllm option"
     },
     {
@@ -2892,7 +2421,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L291",
       "id": "qwen3_asr_rationale_291",
-      "community": 0,
+      "community": 1,
       "norm_label": "returns the supported language list.          returns:             list[str]:"
     },
     {
@@ -2901,7 +2430,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L307",
       "id": "qwen3_asr_rationale_307",
-      "community": 0,
+      "community": 1,
       "norm_label": "transcribe audio with optional context and optional forced alignment timestamps."
     },
     {
@@ -2910,7 +2439,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L455",
       "id": "qwen3_asr_rationale_455",
-      "community": 0,
+      "community": 1,
       "norm_label": "build the string prompt for one request.          if force_language is provide"
     },
     {
@@ -2919,7 +2448,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L473",
       "id": "qwen3_asr_rationale_473",
-      "community": 0,
+      "community": 1,
       "norm_label": "run backend inference for chunk-level items.          args:             conte"
     },
     {
@@ -2928,7 +2457,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L540",
       "id": "qwen3_asr_rationale_540",
-      "community": 0,
+      "community": 1,
       "norm_label": "apply time offset to a forcedalignresult-like object.          this function a"
     },
     {
@@ -2937,7 +2466,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L564",
       "id": "qwen3_asr_rationale_564",
-      "community": 0,
+      "community": 1,
       "norm_label": "merge multiple forcedalignresult objects into a single one by concatenating item"
     },
     {
@@ -2946,7 +2475,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L592",
       "id": "qwen3_asr_rationale_592",
-      "community": 0,
+      "community": 1,
       "norm_label": "initialize streaming asr state for a single stream.          notes:"
     },
     {
@@ -2955,7 +2484,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L658",
       "id": "qwen3_asr_rationale_658",
-      "community": 0,
+      "community": 1,
       "norm_label": "streaming asr decode step.          this function accepts an arbitrary-length"
     },
     {
@@ -2964,7 +2493,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_asr.py",
       "source_location": "L768",
       "id": "qwen3_asr_rationale_768",
-      "community": 0,
+      "community": 1,
       "norm_label": "finish streaming asr.          this function flushes the remaining buffered au"
     },
     {
@@ -2973,7 +2502,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L1",
       "id": "qwen_asr_inference_qwen3_forced_aligner_py",
-      "community": 0,
+      "community": 4,
       "norm_label": "qwen3_forced_aligner.py"
     },
     {
@@ -2982,7 +2511,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L37",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor",
-      "community": 12,
+      "community": 4,
       "norm_label": "qwen3forcealignprocessor"
     },
     {
@@ -2991,7 +2520,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L38",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_init",
-      "community": 12,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -3000,7 +2529,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L51",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_is_kept_char",
-      "community": 12,
+      "community": 4,
       "norm_label": ".is_kept_char()"
     },
     {
@@ -3009,7 +2538,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L59",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_clean_token",
-      "community": 12,
+      "community": 4,
       "norm_label": ".clean_token()"
     },
     {
@@ -3018,7 +2547,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L62",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_is_cjk_char",
-      "community": 12,
+      "community": 4,
       "norm_label": ".is_cjk_char()"
     },
     {
@@ -3027,7 +2556,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L74",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_tokenize_chinese_mixed",
-      "community": 12,
+      "community": 4,
       "norm_label": ".tokenize_chinese_mixed()"
     },
     {
@@ -3036,7 +2565,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L101",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_tokenize_japanese",
-      "community": 12,
+      "community": 4,
       "norm_label": ".tokenize_japanese()"
     },
     {
@@ -3045,7 +2574,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L110",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_tokenize_korean",
-      "community": 12,
+      "community": 4,
       "norm_label": ".tokenize_korean()"
     },
     {
@@ -3054,7 +2583,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L119",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_split_segment_with_chinese",
-      "community": 12,
+      "community": 4,
       "norm_label": ".split_segment_with_chinese()"
     },
     {
@@ -3063,7 +2592,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L139",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_tokenize_space_lang",
-      "community": 12,
+      "community": 4,
       "norm_label": ".tokenize_space_lang()"
     },
     {
@@ -3072,7 +2601,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L147",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_fix_timestamp",
-      "community": 12,
+      "community": 4,
       "norm_label": ".fix_timestamp()"
     },
     {
@@ -3081,7 +2610,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L236",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_encode_timestamp",
-      "community": 12,
+      "community": 4,
       "norm_label": ".encode_timestamp()"
     },
     {
@@ -3090,7 +2619,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L254",
       "id": "qwen3_forced_aligner_qwen3forcealignprocessor_parse_timestamp",
-      "community": 12,
+      "community": 4,
       "norm_label": ".parse_timestamp()"
     },
     {
@@ -3099,7 +2628,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L271",
       "id": "qwen3_forced_aligner_forcedalignitem",
-      "community": 0,
+      "community": 4,
       "norm_label": "forcedalignitem"
     },
     {
@@ -3108,7 +2637,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L289",
       "id": "qwen3_forced_aligner_forcedalignresult",
-      "community": 0,
+      "community": 4,
       "norm_label": "forcedalignresult"
     },
     {
@@ -3117,7 +2646,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L299",
       "id": "qwen3_forced_aligner_forcedalignresult_iter",
-      "community": 0,
+      "community": 4,
       "norm_label": ".__iter__()"
     },
     {
@@ -3126,7 +2655,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L302",
       "id": "qwen3_forced_aligner_forcedalignresult_len",
-      "community": 0,
+      "community": 4,
       "norm_label": ".__len__()"
     },
     {
@@ -3135,7 +2664,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L305",
       "id": "qwen3_forced_aligner_forcedalignresult_getitem",
-      "community": 0,
+      "community": 4,
       "norm_label": ".__getitem__()"
     },
     {
@@ -3144,7 +2673,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L309",
       "id": "qwen3_forced_aligner_qwen3forcedaligner",
-      "community": 0,
+      "community": 1,
       "norm_label": "qwen3forcedaligner"
     },
     {
@@ -3153,7 +2682,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L320",
       "id": "qwen3_forced_aligner_qwen3forcedaligner_init",
-      "community": 0,
+      "community": 1,
       "norm_label": ".__init__()"
     },
     {
@@ -3162,7 +2691,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L341",
       "id": "qwen3_forced_aligner_from_pretrained",
-      "community": 0,
+      "community": 4,
       "norm_label": "from_pretrained()"
     },
     {
@@ -3171,7 +2700,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L382",
       "id": "qwen3_forced_aligner_qwen3forcedaligner_to_structured_items",
-      "community": 0,
+      "community": 4,
       "norm_label": "._to_structured_items()"
     },
     {
@@ -3180,7 +2709,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L395",
       "id": "qwen3_forced_aligner_align",
-      "community": 12,
+      "community": 4,
       "norm_label": "align()"
     },
     {
@@ -3189,7 +2718,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L462",
       "id": "qwen3_forced_aligner_qwen3forcedaligner_get_supported_languages",
-      "community": 0,
+      "community": 1,
       "norm_label": ".get_supported_languages()"
     },
     {
@@ -3198,7 +2727,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L272",
       "id": "qwen3_forced_aligner_rationale_272",
-      "community": 0,
+      "community": 4,
       "norm_label": "one aligned item span.      attributes:         text (str):             the"
     },
     {
@@ -3207,7 +2736,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L290",
       "id": "qwen3_forced_aligner_rationale_290",
-      "community": 0,
+      "community": 4,
       "norm_label": "forced alignment output for one sample.      attributes:         items (list["
     },
     {
@@ -3216,7 +2745,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L310",
       "id": "qwen3_forced_aligner_rationale_310",
-      "community": 0,
+      "community": 1,
       "norm_label": "a huggingface-style wrapper for qwen3-forcedaligner model inference.      this"
     },
     {
@@ -3225,7 +2754,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L346",
       "id": "qwen3_forced_aligner_rationale_346",
-      "community": 23,
+      "community": 15,
       "norm_label": "load qwen3-forcedaligner model and initialize processors.          this method"
     },
     {
@@ -3234,7 +2763,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L401",
       "id": "qwen3_forced_aligner_rationale_401",
-      "community": 24,
+      "community": 16,
       "norm_label": "run forced alignment for batch or single sample.          args:             a"
     },
     {
@@ -3243,7 +2772,7 @@
       "source_file": "qwen_asr\\inference\\qwen3_forced_aligner.py",
       "source_location": "L463",
       "id": "qwen3_forced_aligner_rationale_463",
-      "community": 0,
+      "community": 1,
       "norm_label": "list supported language names for the current model.          this is a thin w"
     },
     {
@@ -3369,7 +2898,7 @@
       "source_file": "qwen_asr\\inference\\utils.py",
       "source_location": "L228",
       "id": "utils_audiochunk",
-      "community": 0,
+      "community": 1,
       "norm_label": "audiochunk"
     },
     {
@@ -3450,7 +2979,7 @@
       "source_file": "qwen_asr\\inference\\utils.py",
       "source_location": "L229",
       "id": "utils_rationale_229",
-      "community": 0,
+      "community": 1,
       "norm_label": "one chunk cut from an original audio.      attributes:         orig_index: in"
     },
     {
@@ -3479,1763 +3008,271 @@
       "id": "utils_rationale_474",
       "community": 5,
       "norm_label": "merge per-chunk languages into a compact comma-separated string,     keeping or"
-    },
-    {
-      "label": "Qwen3-ASR",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_qwen3_asr",
-      "community": 3,
-      "norm_label": "qwen3-asr"
-    },
-    {
-      "label": "Qwen3-ASR-1.7B",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_qwen3_asr_1_7b",
-      "community": 3,
-      "norm_label": "qwen3-asr-1.7b"
-    },
-    {
-      "label": "Qwen3-ASR-0.6B",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_qwen3_asr_0_6b",
-      "community": 3,
-      "norm_label": "qwen3-asr-0.6b"
-    },
-    {
-      "label": "Qwen3-ForcedAligner-0.6B",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_qwen3_forced_aligner",
-      "community": 3,
-      "norm_label": "qwen3-forcedaligner-0.6b"
-    },
-    {
-      "label": "Qwen3-Omni Foundation Model",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_qwen3_omni",
-      "community": 3,
-      "norm_label": "qwen3-omni foundation model"
-    },
-    {
-      "label": "Transformers Backend",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_transformers_backend",
-      "community": 3,
-      "norm_label": "transformers backend"
-    },
-    {
-      "label": "vLLM Backend",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_vllm_backend",
-      "community": 3,
-      "norm_label": "vllm backend"
-    },
-    {
-      "label": "Streaming Inference",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_streaming_inference",
-      "community": 3,
-      "norm_label": "streaming inference"
-    },
-    {
-      "label": "Offline Inference",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_offline_inference",
-      "community": 3,
-      "norm_label": "offline inference"
-    },
-    {
-      "label": "Language Identification",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_language_identification",
-      "community": 3,
-      "norm_label": "language identification"
-    },
-    {
-      "label": "52 Languages and Dialects Support",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_52_languages",
-      "community": 3,
-      "norm_label": "52 languages and dialects support"
-    },
-    {
-      "label": "FlashAttention 2",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_flash_attention",
-      "community": 3,
-      "norm_label": "flashattention 2"
-    },
-    {
-      "label": "DashScope API",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_dashscope_api",
-      "community": 3,
-      "norm_label": "dashscope api"
-    },
-    {
-      "label": "Gradio Web Demo",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_gradio_demo",
-      "community": 3,
-      "norm_label": "gradio web demo"
-    },
-    {
-      "label": "Docker Image (qwenllm/qwen3-asr)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_docker",
-      "community": 3,
-      "norm_label": "docker image (qwenllm/qwen3-asr)"
-    },
-    {
-      "label": "Forced Alignment (Timestamp Prediction)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_forced_alignment",
-      "community": 3,
-      "norm_label": "forced alignment (timestamp prediction)"
-    },
-    {
-      "label": "Whisper-large-v3",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_whisper_large_v3",
-      "community": 3,
-      "norm_label": "whisper-large-v3"
-    },
-    {
-      "label": "GPT-4o-Transcribe",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_gpt4o_transcribe",
-      "community": 3,
-      "norm_label": "gpt-4o-transcribe"
-    },
-    {
-      "label": "Gemini-2.5-Pro",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_gemini_25_pro",
-      "community": 3,
-      "norm_label": "gemini-2.5-pro"
-    },
-    {
-      "label": "Word Error Rate (WER)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_wer_metric",
-      "community": 3,
-      "norm_label": "word error rate (wer)"
-    },
-    {
-      "label": "Singing Voice Transcription",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_singing_voice",
-      "community": 3,
-      "norm_label": "singing voice transcription"
-    },
-    {
-      "label": "OpenAI SDK Compatibility",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_openai_sdk",
-      "community": 3,
-      "norm_label": "openai sdk compatibility"
-    },
-    {
-      "label": "Supervised Fine-Tuning (SFT)",
-      "file_type": "document",
-      "source_file": "finetuning/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "finetuning_readme_sft",
-      "community": 3,
-      "norm_label": "supervised fine-tuning (sft)"
-    },
-    {
-      "label": "JSONL Audio-Text Training Format",
-      "file_type": "document",
-      "source_file": "finetuning/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "finetuning_readme_jsonl_format",
-      "community": 3,
-      "norm_label": "jsonl audio-text training format"
-    },
-    {
-      "label": "Multi-GPU Training (torchrun)",
-      "file_type": "document",
-      "source_file": "finetuning/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "finetuning_readme_torchrun",
-      "community": 3,
-      "norm_label": "multi-gpu training (torchrun)"
-    },
-    {
-      "label": "Language Prefix in Training Data",
-      "file_type": "document",
-      "source_file": "finetuning/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "finetuning_readme_language_prefix",
-      "community": 3,
-      "norm_label": "language prefix in training data"
-    },
-    {
-      "label": "Rationale: Unified Offline/Streaming Model Design",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "finetuning_readme_rationale_unified",
-      "community": 3,
-      "norm_label": "rationale: unified offline/streaming model design"
-    },
-    {
-      "label": "Rationale: NAR Architecture for Forced Alignment",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "finetuning_readme_rationale_nar",
-      "community": 3,
-      "norm_label": "rationale: nar architecture for forced alignment"
     }
   ],
   "links": [
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L45",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_download_audio_bytes",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_download_audio_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_read_wav_from_bytes",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_read_wav_from_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_to_data_url_base64",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_to_data_url_base64",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L62",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_print_result",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_print_result",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L74",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_test_single_url",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_test_single_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L84",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_test_batch_mixed",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L101",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L112",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L127",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_transformers_py",
-      "_tgt": "example_qwen3_asr_transformers_main",
-      "source": "examples_example_qwen3_asr_transformers_py",
-      "target": "example_qwen3_asr_transformers_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L85",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_transformers_download_audio_bytes",
-      "source": "example_qwen3_asr_transformers_download_audio_bytes",
-      "target": "example_qwen3_asr_transformers_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L113",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "_tgt": "example_qwen3_asr_transformers_download_audio_bytes",
-      "source": "example_qwen3_asr_transformers_download_audio_bytes",
-      "target": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L89",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_transformers_read_wav_from_bytes",
-      "source": "example_qwen3_asr_transformers_read_wav_from_bytes",
-      "target": "example_qwen3_asr_transformers_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_transformers_to_data_url_base64",
-      "source": "example_qwen3_asr_transformers_to_data_url_base64",
-      "target": "example_qwen3_asr_transformers_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L114",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "_tgt": "example_qwen3_asr_transformers_to_data_url_base64",
-      "source": "example_qwen3_asr_transformers_to_data_url_base64",
-      "target": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L81",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_single_url",
-      "_tgt": "example_qwen3_asr_transformers_print_result",
-      "source": "example_qwen3_asr_transformers_print_result",
-      "target": "example_qwen3_asr_transformers_test_single_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_transformers_print_result",
-      "source": "example_qwen3_asr_transformers_print_result",
-      "target": "example_qwen3_asr_transformers_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L109",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "_tgt": "example_qwen3_asr_transformers_print_result",
-      "source": "example_qwen3_asr_transformers_print_result",
-      "target": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L124",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "_tgt": "example_qwen3_asr_transformers_print_result",
-      "source": "example_qwen3_asr_transformers_print_result",
-      "target": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L143",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_main",
-      "_tgt": "example_qwen3_asr_transformers_test_single_url",
-      "source": "example_qwen3_asr_transformers_test_single_url",
-      "target": "example_qwen3_asr_transformers_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L144",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_main",
-      "_tgt": "example_qwen3_asr_transformers_test_batch_mixed",
-      "source": "example_qwen3_asr_transformers_test_batch_mixed",
-      "target": "example_qwen3_asr_transformers_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L145",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_main",
-      "_tgt": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "source": "example_qwen3_asr_transformers_test_single_with_timestamps",
-      "target": "example_qwen3_asr_transformers_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_transformers.py",
-      "source_location": "L146",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_transformers_main",
-      "_tgt": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "source": "example_qwen3_asr_transformers_test_batch_with_timestamps",
-      "target": "example_qwen3_asr_transformers_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L49",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_download_audio_bytes",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_download_audio_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L55",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_read_wav_from_bytes",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_read_wav_from_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_to_data_url_base64",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_to_data_url_base64",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_print_result",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_print_result",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L78",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_test_single_url",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_test_single_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_test_batch_mixed",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L105",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L116",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L131",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_py",
-      "_tgt": "example_qwen3_asr_vllm_main",
-      "source": "examples_example_qwen3_asr_vllm_py",
-      "target": "example_qwen3_asr_vllm_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L89",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_vllm_download_audio_bytes",
-      "source": "example_qwen3_asr_vllm_download_audio_bytes",
-      "target": "example_qwen3_asr_vllm_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L117",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "_tgt": "example_qwen3_asr_vllm_download_audio_bytes",
-      "source": "example_qwen3_asr_vllm_download_audio_bytes",
-      "target": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L93",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_vllm_read_wav_from_bytes",
-      "source": "example_qwen3_asr_vllm_read_wav_from_bytes",
-      "target": "example_qwen3_asr_vllm_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L92",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_vllm_to_data_url_base64",
-      "source": "example_qwen3_asr_vllm_to_data_url_base64",
-      "target": "example_qwen3_asr_vllm_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L118",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "_tgt": "example_qwen3_asr_vllm_to_data_url_base64",
-      "source": "example_qwen3_asr_vllm_to_data_url_base64",
-      "target": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L85",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_single_url",
-      "_tgt": "example_qwen3_asr_vllm_print_result",
-      "source": "example_qwen3_asr_vllm_print_result",
-      "target": "example_qwen3_asr_vllm_test_single_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L102",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_mixed",
-      "_tgt": "example_qwen3_asr_vllm_print_result",
-      "source": "example_qwen3_asr_vllm_print_result",
-      "target": "example_qwen3_asr_vllm_test_batch_mixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L113",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "_tgt": "example_qwen3_asr_vllm_print_result",
-      "source": "example_qwen3_asr_vllm_print_result",
-      "target": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L128",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "_tgt": "example_qwen3_asr_vllm_print_result",
-      "source": "example_qwen3_asr_vllm_print_result",
-      "target": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L145",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_main",
-      "_tgt": "example_qwen3_asr_vllm_test_single_url",
-      "source": "example_qwen3_asr_vllm_test_single_url",
-      "target": "example_qwen3_asr_vllm_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L146",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_main",
-      "_tgt": "example_qwen3_asr_vllm_test_batch_mixed",
-      "source": "example_qwen3_asr_vllm_test_batch_mixed",
-      "target": "example_qwen3_asr_vllm_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L147",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_main",
-      "_tgt": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "source": "example_qwen3_asr_vllm_test_single_with_timestamps",
-      "target": "example_qwen3_asr_vllm_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm.py",
-      "source_location": "L148",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_main",
-      "_tgt": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "source": "example_qwen3_asr_vllm_test_batch_with_timestamps",
-      "target": "example_qwen3_asr_vllm_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L38",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_streaming_py",
-      "_tgt": "example_qwen3_asr_vllm_streaming_download_audio_bytes",
-      "source": "examples_example_qwen3_asr_vllm_streaming_py",
-      "target": "example_qwen3_asr_vllm_streaming_download_audio_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L44",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_streaming_py",
-      "_tgt": "example_qwen3_asr_vllm_streaming_read_wav_from_bytes",
-      "source": "examples_example_qwen3_asr_vllm_streaming_py",
-      "target": "example_qwen3_asr_vllm_streaming_read_wav_from_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L50",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_streaming_py",
-      "_tgt": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "source": "examples_example_qwen3_asr_vllm_streaming_py",
-      "target": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_streaming_py",
-      "_tgt": "example_qwen3_asr_vllm_streaming_run_streaming_case",
-      "source": "examples_example_qwen3_asr_vllm_streaming_py",
-      "target": "example_qwen3_asr_vllm_streaming_run_streaming_case",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_asr_vllm_streaming_py",
-      "_tgt": "example_qwen3_asr_vllm_streaming_main",
-      "source": "examples_example_qwen3_asr_vllm_streaming_py",
-      "target": "example_qwen3_asr_vllm_streaming_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L96",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_streaming_main",
-      "_tgt": "example_qwen3_asr_vllm_streaming_download_audio_bytes",
-      "source": "example_qwen3_asr_vllm_streaming_download_audio_bytes",
-      "target": "example_qwen3_asr_vllm_streaming_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L97",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_streaming_main",
-      "_tgt": "example_qwen3_asr_vllm_streaming_read_wav_from_bytes",
-      "source": "example_qwen3_asr_vllm_streaming_read_wav_from_bytes",
-      "target": "example_qwen3_asr_vllm_streaming_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_streaming_main",
-      "_tgt": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "source": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "target": "example_qwen3_asr_vllm_streaming_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_streaming_rationale_51",
-      "_tgt": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "source": "example_qwen3_asr_vllm_streaming_resample_to_16k",
-      "target": "example_qwen3_asr_vllm_streaming_rationale_51",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_asr_vllm_streaming.py",
-      "source_location": "L101",
-      "weight": 1.0,
-      "_src": "example_qwen3_asr_vllm_streaming_main",
-      "_tgt": "example_qwen3_asr_vllm_streaming_run_streaming_case",
-      "source": "example_qwen3_asr_vllm_streaming_run_streaming_case",
-      "target": "example_qwen3_asr_vllm_streaming_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_download_audio_bytes",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_download_audio_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L67",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L82",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_to_data_url_base64",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_to_data_url_base64",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L97",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_print_result",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L116",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_test_single_url",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_test_single_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L130",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_test_batch_url",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_test_batch_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L144",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_test_base64_data_url",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_test_base64_data_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L161",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L178",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L198",
-      "weight": 1.0,
-      "_src": "examples_example_qwen3_forced_aligner_py",
-      "_tgt": "example_qwen3_forced_aligner_main",
-      "source": "examples_example_qwen3_forced_aligner_py",
-      "target": "example_qwen3_forced_aligner_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L148",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_base64_data_url",
-      "_tgt": "example_qwen3_forced_aligner_download_audio_bytes",
-      "source": "example_qwen3_forced_aligner_download_audio_bytes",
-      "target": "example_qwen3_forced_aligner_test_base64_data_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L165",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "_tgt": "example_qwen3_forced_aligner_download_audio_bytes",
-      "source": "example_qwen3_forced_aligner_download_audio_bytes",
-      "target": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L182",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "_tgt": "example_qwen3_forced_aligner_download_audio_bytes",
-      "source": "example_qwen3_forced_aligner_download_audio_bytes",
-      "target": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L52",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_52",
-      "_tgt": "example_qwen3_forced_aligner_download_audio_bytes",
-      "source": "example_qwen3_forced_aligner_download_audio_bytes",
-      "target": "example_qwen3_forced_aligner_rationale_52",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L166",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "_tgt": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "source": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "target": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L186",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "_tgt": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "source": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "target": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_68",
-      "_tgt": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "source": "example_qwen3_forced_aligner_read_wav_from_bytes",
-      "target": "example_qwen3_forced_aligner_rationale_68",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L149",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_base64_data_url",
-      "_tgt": "example_qwen3_forced_aligner_to_data_url_base64",
-      "source": "example_qwen3_forced_aligner_to_data_url_base64",
-      "target": "example_qwen3_forced_aligner_test_base64_data_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L185",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "_tgt": "example_qwen3_forced_aligner_to_data_url_base64",
-      "source": "example_qwen3_forced_aligner_to_data_url_base64",
-      "target": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L83",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_83",
-      "_tgt": "example_qwen3_forced_aligner_to_data_url_base64",
-      "source": "example_qwen3_forced_aligner_to_data_url_base64",
-      "target": "example_qwen3_forced_aligner_rationale_83",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L127",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_single_url",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "example_qwen3_forced_aligner_print_result",
-      "target": "example_qwen3_forced_aligner_test_single_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L141",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_batch_url",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "example_qwen3_forced_aligner_print_result",
-      "target": "example_qwen3_forced_aligner_test_batch_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L158",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_base64_data_url",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "example_qwen3_forced_aligner_print_result",
-      "target": "example_qwen3_forced_aligner_test_base64_data_url",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L175",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "example_qwen3_forced_aligner_print_result",
-      "target": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L195",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "example_qwen3_forced_aligner_print_result",
-      "target": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_98",
-      "_tgt": "example_qwen3_forced_aligner_print_result",
-      "source": "example_qwen3_forced_aligner_print_result",
-      "target": "example_qwen3_forced_aligner_rationale_98",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L206",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_main",
-      "_tgt": "example_qwen3_forced_aligner_test_single_url",
-      "source": "example_qwen3_forced_aligner_test_single_url",
-      "target": "example_qwen3_forced_aligner_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L117",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_117",
-      "_tgt": "example_qwen3_forced_aligner_test_single_url",
-      "source": "example_qwen3_forced_aligner_test_single_url",
-      "target": "example_qwen3_forced_aligner_rationale_117",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L207",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_main",
-      "_tgt": "example_qwen3_forced_aligner_test_batch_url",
-      "source": "example_qwen3_forced_aligner_test_batch_url",
-      "target": "example_qwen3_forced_aligner_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L131",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_131",
-      "_tgt": "example_qwen3_forced_aligner_test_batch_url",
-      "source": "example_qwen3_forced_aligner_test_batch_url",
-      "target": "example_qwen3_forced_aligner_rationale_131",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L208",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_main",
-      "_tgt": "example_qwen3_forced_aligner_test_base64_data_url",
-      "source": "example_qwen3_forced_aligner_test_base64_data_url",
-      "target": "example_qwen3_forced_aligner_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L145",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_145",
-      "_tgt": "example_qwen3_forced_aligner_test_base64_data_url",
-      "source": "example_qwen3_forced_aligner_test_base64_data_url",
-      "target": "example_qwen3_forced_aligner_rationale_145",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L209",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_main",
-      "_tgt": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "source": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "target": "example_qwen3_forced_aligner_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L162",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_162",
-      "_tgt": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "source": "example_qwen3_forced_aligner_test_numpy_tuple_from_request",
-      "target": "example_qwen3_forced_aligner_rationale_162",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L210",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_main",
-      "_tgt": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "source": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "target": "example_qwen3_forced_aligner_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "examples\\example_qwen3_forced_aligner.py",
-      "source_location": "L179",
-      "weight": 1.0,
-      "_src": "example_qwen3_forced_aligner_rationale_179",
-      "_tgt": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "source": "example_qwen3_forced_aligner_test_batch_mixed_inputs",
-      "target": "example_qwen3_forced_aligner_rationale_179",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
+      "source_file": "g.py",
       "source_location": "L31",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_patch_outer_forward",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_patch_outer_forward",
+      "_src": "g_py",
+      "_tgt": "g_session",
+      "source": "g_py",
+      "target": "g_session",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L67",
+      "source_file": "g.py",
+      "source_location": "L79",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_find_latest_checkpoint",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_find_latest_checkpoint",
+      "_src": "g_py",
+      "_tgt": "g_gc_sessions",
+      "source": "g_py",
+      "target": "g_gc_sessions",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L84",
-      "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_load_audio",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_load_audio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L89",
-      "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_build_prefix_messages",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_build_prefix_messages",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L96",
-      "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_make_preprocess_fn_prefix_only",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_make_preprocess_fn_prefix_only",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
+      "source_file": "g.py",
       "source_location": "L115",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
+      "_src": "g_py",
+      "_tgt": "g_get_session",
+      "source": "g_py",
+      "target": "g_get_session",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L156",
+      "source_file": "g.py",
+      "source_location": "L130",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_castfloatinputstrainer",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_castfloatinputstrainer",
+      "_src": "g_py",
+      "_tgt": "g_calculate_rms",
+      "source": "g_py",
+      "target": "g_calculate_rms",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L167",
+      "source_file": "g.py",
+      "source_location": "L144",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_copy_required_hf_files_for_qwen_asr",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_copy_required_hf_files_for_qwen_asr",
+      "_src": "g_py",
+      "_tgt": "g_process_vad_and_asr",
+      "source": "g_py",
+      "target": "g_process_vad_and_asr",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L187",
+      "source_file": "g.py",
+      "source_location": "L223",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
+      "_src": "g_py",
+      "_tgt": "g_api_start",
+      "source": "g_py",
+      "target": "g_api_start",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L203",
+      "source_file": "g.py",
+      "source_location": "L237",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_parse_args",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_parse_args",
+      "_src": "g_py",
+      "_tgt": "g_api_chunk",
+      "source": "g_py",
+      "target": "g_api_chunk",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L242",
+      "source_file": "g.py",
+      "source_location": "L301",
       "weight": 1.0,
-      "_src": "finetuning_qwen3_asr_sft_py",
-      "_tgt": "qwen3_asr_sft_main",
-      "source": "finetuning_qwen3_asr_sft_py",
-      "target": "qwen3_asr_sft_main",
+      "_src": "g_py",
+      "_tgt": "g_api_finish",
+      "source": "g_py",
+      "target": "g_api_finish",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "g.py",
+      "source_location": "L326",
+      "weight": 1.0,
+      "_src": "g_py",
+      "_tgt": "g_parse_args",
+      "source": "g_py",
+      "target": "g_parse_args",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "g.py",
+      "source_location": "L341",
+      "weight": 1.0,
+      "_src": "g_py",
+      "_tgt": "g_main",
+      "source": "g_py",
+      "target": "g_main",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L257",
+      "source_file": "g.py",
+      "source_location": "L231",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_patch_outer_forward",
-      "source": "qwen3_asr_sft_patch_outer_forward",
-      "target": "qwen3_asr_sft_main",
+      "_src": "g_api_start",
+      "_tgt": "g_session",
+      "source": "g_session",
+      "target": "g_api_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "g.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "g_rationale_32",
+      "_tgt": "g_session",
+      "source": "g_session",
+      "target": "g_rationale_32",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L316",
+      "source_file": "g.py",
+      "source_location": "L123",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_find_latest_checkpoint",
-      "source": "qwen3_asr_sft_find_latest_checkpoint",
-      "target": "qwen3_asr_sft_main",
+      "_src": "g_get_session",
+      "_tgt": "g_gc_sessions",
+      "source": "g_gc_sessions",
+      "target": "g_get_session",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "g.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_src": "g_rationale_80",
+      "_tgt": "g_gc_sessions",
+      "source": "g_gc_sessions",
+      "target": "g_rationale_80",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L126",
+      "source_file": "g.py",
+      "source_location": "L241",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning_call",
-      "_tgt": "qwen3_asr_sft_load_audio",
-      "source": "qwen3_asr_sft_load_audio",
-      "target": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning_call",
+      "_src": "g_api_chunk",
+      "_tgt": "g_get_session",
+      "source": "g_get_session",
+      "target": "g_api_chunk",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L267",
+      "source_file": "g.py",
+      "source_location": "L303",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_make_preprocess_fn_prefix_only",
-      "source": "qwen3_asr_sft_make_preprocess_fn_prefix_only",
-      "target": "qwen3_asr_sft_main",
+      "_src": "g_api_finish",
+      "_tgt": "g_get_session",
+      "source": "g_get_session",
+      "target": "g_api_finish",
       "confidence_score": 1.0
     },
     {
-      "relation": "method",
+      "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L119",
+      "source_file": "g.py",
+      "source_location": "L116",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
-      "_tgt": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning_call",
-      "source": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
-      "target": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning_call",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L275",
-      "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
-      "source": "qwen3_asr_sft_datacollatorforqwen3asrfinetuning",
-      "target": "qwen3_asr_sft_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L156",
-      "weight": 1.0,
-      "_src": "qwen3_asr_sft_castfloatinputstrainer",
-      "_tgt": "trainer",
-      "source": "qwen3_asr_sft_castfloatinputstrainer",
-      "target": "trainer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L157",
-      "weight": 1.0,
-      "_src": "qwen3_asr_sft_castfloatinputstrainer",
-      "_tgt": "qwen3_asr_sft_castfloatinputstrainer_prepare_inputs",
-      "source": "qwen3_asr_sft_castfloatinputstrainer",
-      "target": "qwen3_asr_sft_castfloatinputstrainer_prepare_inputs",
+      "_src": "g_rationale_116",
+      "_tgt": "g_get_session",
+      "source": "g_get_session",
+      "target": "g_rationale_116",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L304",
+      "source_file": "g.py",
+      "source_location": "L162",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_castfloatinputstrainer",
-      "source": "qwen3_asr_sft_castfloatinputstrainer",
-      "target": "qwen3_asr_sft_main",
+      "_src": "g_process_vad_and_asr",
+      "_tgt": "g_calculate_rms",
+      "source": "g_calculate_rms",
+      "target": "g_process_vad_and_asr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "g.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_src": "g_rationale_131",
+      "_tgt": "g_calculate_rms",
+      "source": "g_calculate_rms",
+      "target": "g_rationale_131",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L199",
+      "source_file": "g.py",
+      "source_location": "L255",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_makeeverycheckpointinferablecallback_on_save",
-      "_tgt": "qwen3_asr_sft_copy_required_hf_files_for_qwen_asr",
-      "source": "qwen3_asr_sft_copy_required_hf_files_for_qwen_asr",
-      "target": "qwen3_asr_sft_makeeverycheckpointinferablecallback_on_save",
+      "_src": "g_api_chunk",
+      "_tgt": "g_process_vad_and_asr",
+      "source": "g_process_vad_and_asr",
+      "target": "g_api_chunk",
       "confidence_score": 1.0
     },
     {
-      "relation": "inherits",
+      "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L187",
+      "source_file": "g.py",
+      "source_location": "L148",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "_tgt": "trainercallback",
-      "source": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "target": "trainercallback",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L188",
-      "weight": 1.0,
-      "_src": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "_tgt": "qwen3_asr_sft_makeeverycheckpointinferablecallback_init",
-      "source": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "target": "qwen3_asr_sft_makeeverycheckpointinferablecallback_init",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L191",
-      "weight": 1.0,
-      "_src": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "_tgt": "qwen3_asr_sft_makeeverycheckpointinferablecallback_on_save",
-      "source": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "target": "qwen3_asr_sft_makeeverycheckpointinferablecallback_on_save",
+      "_src": "g_rationale_148",
+      "_tgt": "g_process_vad_and_asr",
+      "source": "g_process_vad_and_asr",
+      "target": "g_rationale_148",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L311",
+      "source_file": "g.py",
+      "source_location": "L350",
       "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "source": "qwen3_asr_sft_makeeverycheckpointinferablecallback",
-      "target": "qwen3_asr_sft_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "source_file": "finetuning\\qwen3_asr_sft.py",
-      "source_location": "L243",
-      "weight": 1.0,
-      "_src": "qwen3_asr_sft_main",
-      "_tgt": "qwen3_asr_sft_parse_args",
-      "source": "qwen3_asr_sft_parse_args",
-      "target": "qwen3_asr_sft_main",
+      "_src": "g_main",
+      "_tgt": "g_parse_args",
+      "source": "g_parse_args",
+      "target": "g_main",
       "confidence_score": 1.0
     },
     {
@@ -13397,407 +11434,7 @@
       "source": "utils_merge_languages",
       "target": "utils_rationale_474",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_qwen3_asr_1_7b",
-      "source": "readme_qwen3_asr",
-      "target": "readme_qwen3_asr_1_7b"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_qwen3_asr_0_6b",
-      "source": "readme_qwen3_asr",
-      "target": "readme_qwen3_asr_0_6b"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_qwen3_forced_aligner",
-      "source": "readme_qwen3_asr",
-      "target": "readme_qwen3_forced_aligner"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_transformers_backend",
-      "source": "readme_qwen3_asr",
-      "target": "readme_transformers_backend"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_vllm_backend",
-      "source": "readme_qwen3_asr",
-      "target": "readme_vllm_backend"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_language_identification",
-      "source": "readme_qwen3_asr",
-      "target": "readme_language_identification"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_52_languages",
-      "source": "readme_qwen3_asr",
-      "target": "readme_52_languages"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "DashScope API Usage",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_dashscope_api",
-      "source": "readme_qwen3_asr",
-      "target": "readme_dashscope_api"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Launch Local Web UI Demo",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_gradio_demo",
-      "source": "readme_qwen3_asr",
-      "target": "readme_gradio_demo"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Docker",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_docker",
-      "source": "readme_qwen3_asr",
-      "target": "readme_docker"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Singing Voice & Song Transcription",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr",
-      "_tgt": "readme_singing_voice",
-      "source": "readme_qwen3_asr",
-      "target": "readme_singing_voice"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr_1_7b",
-      "_tgt": "readme_qwen3_omni",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "readme_qwen3_omni"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Evaluation",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr_1_7b",
-      "_tgt": "readme_wer_metric",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "readme_wer_metric"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "README.md",
-      "source_location": "Evaluation",
-      "weight": 1.0,
-      "_src": "readme_whisper_large_v3",
-      "_tgt": "readme_qwen3_asr_1_7b",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "readme_whisper_large_v3"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Evaluation",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr_1_7b",
-      "_tgt": "readme_gpt4o_transcribe",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "readme_gpt4o_transcribe"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Evaluation",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr_1_7b",
-      "_tgt": "readme_gemini_25_pro",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "readme_gemini_25_pro"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "finetuning/README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "finetuning_readme_sft",
-      "_tgt": "readme_qwen3_asr_1_7b",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "finetuning_readme_sft"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.9,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr_1_7b",
-      "_tgt": "readme_qwen3_asr_0_6b",
-      "source": "readme_qwen3_asr_1_7b",
-      "target": "readme_qwen3_asr_0_6b"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "weight": 1.0,
-      "_src": "readme_qwen3_asr_0_6b",
-      "_tgt": "readme_qwen3_omni",
-      "source": "readme_qwen3_asr_0_6b",
-      "target": "readme_qwen3_omni"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "ForcedAligner Usage",
-      "weight": 1.0,
-      "_src": "readme_qwen3_forced_aligner",
-      "_tgt": "readme_forced_alignment",
-      "source": "readme_qwen3_forced_aligner",
-      "target": "readme_forced_alignment"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Environment Setup",
-      "weight": 1.0,
-      "_src": "readme_transformers_backend",
-      "_tgt": "readme_flash_attention",
-      "source": "readme_transformers_backend",
-      "target": "readme_flash_attention"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Streaming Inference",
-      "weight": 1.0,
-      "_src": "readme_vllm_backend",
-      "_tgt": "readme_streaming_inference",
-      "source": "readme_vllm_backend",
-      "target": "readme_streaming_inference"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "vLLM Backend",
-      "weight": 1.0,
-      "_src": "readme_vllm_backend",
-      "_tgt": "readme_flash_attention",
-      "source": "readme_vllm_backend",
-      "target": "readme_flash_attention"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "Deployment with vLLM",
-      "weight": 1.0,
-      "_src": "readme_vllm_backend",
-      "_tgt": "readme_openai_sdk",
-      "source": "readme_vllm_backend",
-      "target": "readme_openai_sdk"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "weight": 1.0,
-      "_src": "finetuning_readme_rationale_unified",
-      "_tgt": "readme_streaming_inference",
-      "source": "readme_streaming_inference",
-      "target": "finetuning_readme_rationale_unified"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "weight": 1.0,
-      "_src": "finetuning_readme_rationale_unified",
-      "_tgt": "readme_offline_inference",
-      "source": "readme_offline_inference",
-      "target": "finetuning_readme_rationale_unified"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "finetuning/README.md",
-      "source_location": "Setup",
-      "weight": 1.0,
-      "_src": "finetuning_readme_sft",
-      "_tgt": "readme_flash_attention",
-      "source": "readme_flash_attention",
-      "target": "finetuning_readme_sft"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "README.md",
-      "source_location": "Overview/Introduction",
-      "weight": 1.0,
-      "_src": "finetuning_readme_rationale_nar",
-      "_tgt": "readme_forced_alignment",
-      "source": "readme_forced_alignment",
-      "target": "finetuning_readme_rationale_nar"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "finetuning/README.md",
-      "source_location": "Input JSONL format",
-      "weight": 1.0,
-      "_src": "finetuning_readme_sft",
-      "_tgt": "finetuning_readme_jsonl_format",
-      "source": "finetuning_readme_sft",
-      "target": "finetuning_readme_jsonl_format"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "finetuning/README.md",
-      "source_location": "Fine-tune (multi GPU with torchrun)",
-      "weight": 1.0,
-      "_src": "finetuning_readme_sft",
-      "_tgt": "finetuning_readme_torchrun",
-      "source": "finetuning_readme_sft",
-      "target": "finetuning_readme_torchrun"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "finetuning/README.md",
-      "source_location": "Input JSONL format",
-      "weight": 1.0,
-      "_src": "finetuning_readme_sft",
-      "_tgt": "finetuning_readme_language_prefix",
-      "source": "finetuning_readme_sft",
-      "target": "finetuning_readme_language_prefix"
     }
   ],
-  "hyperedges": [
-    {
-      "id": "asr_model_family",
-      "label": "Qwen3-ASR Model Family",
-      "nodes": [
-        "readme_qwen3_asr_1_7b",
-        "readme_qwen3_asr_0_6b",
-        "readme_qwen3_forced_aligner"
-      ],
-      "relation": "form",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "README.md"
-    },
-    {
-      "id": "inference_backends",
-      "label": "Inference Backend Options",
-      "nodes": [
-        "readme_transformers_backend",
-        "readme_vllm_backend",
-        "readme_streaming_inference",
-        "readme_offline_inference"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "README.md"
-    }
-  ]
+  "hyperedges": []
 }

@@ -1,6 +1,7 @@
 import argparse
 import logging
 import re
+import threading
 import time
 import uuid
 from dataclasses import dataclass, field
@@ -65,6 +66,7 @@ class Session:
 app = Flask(__name__)
 
 global_asr: Optional[Qwen3ASRModel] = None
+_asr_lock = threading.Lock()  # vLLM 不是线程安全的，并发调用 generate 会导致结果串流
 UNFIXED_CHUNK_NUM: int = 2
 UNFIXED_TOKEN_NUM: int = 5
 CHUNK_SIZE_SEC: float = DEFAULT_CHUNK_SIZE_SEC
@@ -74,6 +76,24 @@ SILENCE_MS_TO_FINALIZE: float = DEFAULT_SILENCE_MS_TO_FINALIZE
 SESSIONS: Dict[str, Session] = {}
 SESSION_TTL_SEC = 20 * 10 * 60  # 会话最大生命周期
 NO_AUDIO_TIMEOUT_SEC = 30  # 10 秒未收到语音包则自动结束
+GC_INTERVAL_SEC = 5  # 后台垃圾回收线程的检查间隔
+
+
+def _gc_session_monitor():
+    """后台线程：定期执行会话垃圾回收"""
+    while True:
+        time.sleep(GC_INTERVAL_SEC)
+        try:
+            _gc_sessions()
+        except Exception as e:
+            logger.error(f"[GC监控] 异常: {e}")
+
+
+def _start_gc_monitor():
+    """启动后台 GC 监控线程"""
+    t = threading.Thread(target=_gc_session_monitor, daemon=True, name="gc-monitor")
+    t.start()
+    logger.info("[GC监控] 后台线程已启动，检查间隔=%ds", GC_INTERVAL_SEC)
 
 
 def _gc_sessions():
@@ -94,7 +114,8 @@ def _gc_sessions():
     for sid in audio_timeout:
         try:
             print(f"[自动结束] 会话 {sid}: {now - SESSIONS[sid].last_seen:.1f}秒 未收到语音")
-            global_asr.finish_streaming_transcribe(SESSIONS[sid].state)
+            with _asr_lock:
+                global_asr.finish_streaming_transcribe(SESSIONS[sid].state)
         except Exception as e:
             print(f"[自动结束错误] 会话 {sid}: {e}")
         SESSIONS.pop(sid, None)
@@ -106,7 +127,8 @@ def _gc_sessions():
     ]
     for sid in dead:
         try:
-            global_asr.finish_streaming_transcribe(SESSIONS[sid].state)
+            with _asr_lock:
+                global_asr.finish_streaming_transcribe(SESSIONS[sid].state)
         except Exception:
             pass
         SESSIONS.pop(sid, None)
@@ -120,7 +142,6 @@ def _get_session(session_id: str, update_last_seen: bool = True) -> Optional[Ses
         session_id: 会话ID
         update_last_seen: 是否更新 last_seen 时间戳（默认True）
     """
-    _gc_sessions()
     s = SESSIONS.get(session_id)
     if s and update_last_seen:
         s.last_seen = time.time()
@@ -210,9 +231,9 @@ def _process_vad_and_asr(
     # 保存上一次状态供下一次迭代使用（用原始 is_speech，而非状态机的 in_speech）
     session.was_in_speech = is_speech
 
-    # 流式 ASR: 直接传入切片
-    # streaming_transcribe 函数维护自己的内部缓冲区
-    global_asr.streaming_transcribe(audio_chunk, session.state)
+    # 流式 ASR: 加锁保护 vLLM 推理，防止并发请求结果串流
+    with _asr_lock:
+        global_asr.streaming_transcribe(audio_chunk, session.state)
 
     return is_speech, finalized_sentence, is_start, is_end, len(session.finalized_segments) - 1 if is_end and finalized_sentence else len(session.finalized_segments)
 
@@ -304,7 +325,8 @@ def api_finish():
     if not s:
         return jsonify({"error": "invalid session_id"}), 400
 
-    global_asr.finish_streaming_transcribe(s.state)
+    with _asr_lock:
+        global_asr.finish_streaming_transcribe(s.state)
 
     # 将剩余文本添加为最终片段
     remaining = s.state.text.strip()
@@ -363,6 +385,7 @@ def main():
     print(f"模型已加载：{args.asr_model_path}")
     print(f"VAD 设置：RMS 阈值={RMS_THRESHOLD:.4f}, 静音断句={SILENCE_MS_TO_FINALIZE}ms")
     print(f"服务器启动于 http://{args.host}:{args.port}/")
+    _start_gc_monitor()
     app.run(host=args.host, port=args.port, debug=False, use_reloader=False, threaded=True)
 
 
