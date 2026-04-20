@@ -62,6 +62,9 @@ class Session:
     last_finalized_text: str = ""
     last_vad_state_text: str = ""
 
+    # 句子耗时追踪
+    speech_start_time: Optional[float] = None
+
 
 app = Flask(__name__)
 
@@ -283,6 +286,10 @@ def api_chunk():
     if seq_type == 2:
         is_end = True
 
+    # 记录语音开始时间
+    if is_start:
+        s.speech_start_time = t0
+
     # 获取完整文本和新文本（自上次断句以来的内容）
     full_text = getattr(s.state, "text", "") or ""
     new_text = full_text[len(s.last_finalized_text):] if full_text else ""
@@ -316,6 +323,13 @@ def api_chunk():
         vad["segment_index"], response_data["language"],
         response_data["text"],
     )
+    if is_end and s.speech_start_time is not None:
+        sentence_total_ms = (time.time() - s.speech_start_time) * 1000
+        logger.info(
+            "[sentence] session_id=%s seg=%s 从开始到断句总耗时=%.1fms | text=%r",
+            session_id, vad["segment_index"], sentence_total_ms, response_data["text"],
+        )
+        s.speech_start_time = None
     return jsonify(response_data)
 
 
