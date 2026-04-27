@@ -51,6 +51,7 @@ class Session:
     state: object
     created_at: float
     last_seen: float
+    language: Optional[str] = None
 
     # VAD 状态
     in_speech: bool = False
@@ -228,6 +229,7 @@ def _process_vad_and_asr(
                 unfixed_chunk_num=UNFIXED_CHUNK_NUM,
                 unfixed_token_num=UNFIXED_TOKEN_NUM,
                 chunk_size_sec=CHUNK_SIZE_SEC,
+                language=session.language,
             )
             session.last_finalized_text = ""
 
@@ -246,13 +248,15 @@ def _process_vad_and_asr(
 @app.post("/api/start")
 def api_start():
     session_id = uuid.uuid4().hex
+    language = request.args.get("language", "Chinese")
     state = global_asr.init_streaming_state(
         unfixed_chunk_num=UNFIXED_CHUNK_NUM,
         unfixed_token_num=UNFIXED_TOKEN_NUM,
         chunk_size_sec=CHUNK_SIZE_SEC,
+        language=language,
     )
     now = time.time()
-    SESSIONS[session_id] = Session(state=state, created_at=now, last_seen=now)
+    SESSIONS[session_id] = Session(state=state, created_at=now, last_seen=now, language=language)
     logger.info("[start] time=%s session_id=%s", time.strftime("%Y-%m-%d %H:%M:%S"), session_id)
     return jsonify({"session_id": session_id})
 
