@@ -24,8 +24,9 @@ logger = logging.getLogger(__name__)
 
 # ============== RMS VAD 配置 ==============
 DEFAULT_CHUNK_SIZE_SEC = 0.5  # 每个切片 500ms（与 test_streaming.py 默认值匹配）
-DEFAULT_RMS_THRESHOLD = 0.02  # 声音检测能量阈值
+DEFAULT_RMS_THRESHOLD = 0.15  # 声音检测能量阈值
 DEFAULT_SILENCE_MS_TO_FINALIZE = 800  # 触发断句的静音时长（与 Gradio UI 默认值匹配）
+MAX_AUDIO_ACCUM_SEC = 30.0  # 最大累积音频时长（秒），超过后强制断句重置
 
 
 @dataclass
@@ -76,6 +77,7 @@ UNFIXED_TOKEN_NUM: int = 5
 CHUNK_SIZE_SEC: float = DEFAULT_CHUNK_SIZE_SEC
 RMS_THRESHOLD: float = DEFAULT_RMS_THRESHOLD
 SILENCE_MS_TO_FINALIZE: float = DEFAULT_SILENCE_MS_TO_FINALIZE
+MAX_AUDIO_ACCUM_SEC: float = MAX_AUDIO_ACCUM_SEC
 
 SESSIONS: Dict[str, Session] = {}
 SESSION_TTL_SEC = 20 * 10 * 60  # 会话最大生命周期
@@ -206,10 +208,14 @@ def _process_vad_and_asr(
     # 从 ASR 状态获取当前文本
     current_text = session.state.text.strip()
 
-    # 检查是否应该断句（语音后的静音 + 有新文本）
+    # 计算当前累积的音频时长（秒）
+    audio_accum_sec = len(session.state.audio_accum) / 16000.0
+    force_finalize = audio_accum_sec >= MAX_AUDIO_ACCUM_SEC
+
+    # 检查是否应该断句（语音后的静音 + 有新文本，或强制断句）
     finalized_sentence = None
     is_end = False
-    if session.in_speech and session.silence_ms >= SILENCE_MS_TO_FINALIZE:
+    if (session.in_speech and session.silence_ms >= SILENCE_MS_TO_FINALIZE) or force_finalize:
         # 触发断句 - 提取自上次断句以来的新文本
         if len(current_text) > len(session.last_finalized_text):
             new_text = current_text[len(session.last_finalized_text):]
@@ -218,6 +224,12 @@ def _process_vad_and_asr(
                 session.finalized_segments.append(finalized_sentence)
                 session.last_finalized_text = current_text
                 is_end = True  # 标记此切片为句子结束
+
+                if force_finalize:
+                    logger.warning(
+                        "[强制断句] audio_accum已累积%.1f秒，超过限制%.1f秒，强制断句重置",
+                        audio_accum_sec, MAX_AUDIO_ACCUM_SEC
+                    )
 
         # 重置 VAD 状态以处理下一句
         session.in_speech = False
@@ -319,10 +331,11 @@ def api_chunk():
     vad = response_data["vad_status"]
     elapsed_ms = (time.time() - t0) * 1000
     perf_tag = " [严重超时]" if elapsed_ms > 400 else " [延迟]" if elapsed_ms > 200 else " [缓慢]" if elapsed_ms > 100 else ""
+    audio_accum_sec = len(s.state.audio_accum) / 16000.0
     logger.info(
-        "[vad] time=%s session_id=%s cost=%.1fms%s | is_start=%s is_end=%s is_speech=%s silence_ms=%.1f seg=%s"
+        "[vad] time=%s session_id=%s cost=%.1fms%s accum=%.1fs | is_start=%s is_end=%s is_speech=%s silence_ms=%.1f seg=%s"
         " | lang=%s text=%r",
-        time.strftime("%Y-%m-%d %H:%M:%S"), session_id, elapsed_ms, perf_tag,
+        time.strftime("%Y-%m-%d %H:%M:%S"), session_id, elapsed_ms, perf_tag, audio_accum_sec,
         vad["is_start"], vad["is_end"], vad["is_speech"], vad["silence_ms"],
         vad["segment_index"], response_data["language"],
         response_data["text"],
@@ -376,6 +389,7 @@ def parse_args():
     p.add_argument("--chunk-size-sec", type=float, default=DEFAULT_CHUNK_SIZE_SEC, help="切片时长（秒）")
     p.add_argument("--rms-threshold", type=float, default=DEFAULT_RMS_THRESHOLD, help="VAD 的 RMS 能量阈值")
     p.add_argument("--silence-ms", type=float, default=DEFAULT_SILENCE_MS_TO_FINALIZE, help="触发断句的静音时长")
+    p.add_argument("--max-audio-accum-sec", type=float, default=MAX_AUDIO_ACCUM_SEC, help="最大累积音频时长（秒），超过后强制断句")
     return p.parse_args()
 
 
@@ -387,6 +401,7 @@ def main():
     global CHUNK_SIZE_SEC
     global RMS_THRESHOLD
     global SILENCE_MS_TO_FINALIZE
+    global MAX_AUDIO_ACCUM_SEC
 
     args = parse_args()
 
@@ -395,6 +410,7 @@ def main():
     CHUNK_SIZE_SEC = args.chunk_size_sec
     RMS_THRESHOLD = args.rms_threshold
     SILENCE_MS_TO_FINALIZE = args.silence_ms
+    MAX_AUDIO_ACCUM_SEC = args.max_audio_accum_sec
 
     global_asr = Qwen3ASRModel.LLM(
         model=args.asr_model_path,
